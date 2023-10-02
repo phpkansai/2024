@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="UTF-8">
+<meta name="keywords" content="PHPカンファレンス関西2024,PHP,PHPカンファレンス,">
+<meta name="description" content="集えPHPer！！あのPHPの祭典が6年ぶりに帰ってきた！！2024年2月11日（日）に開催のPHPカンファレンス関西2024は、関西最大のPHPエンジニア向けTechイベントです。">
+<meta name="viewport" content="width=device-width">
+
+<title>PHPカンファレンス関西2024</title>
+<link rel="stylesheet" type="text/css" href="./css/reset.css" media="all">
+<link rel="stylesheet" type="text/css" href="./css/base.css" media="all">
+<link rel="stylesheet" type="text/css" href="./css/full-screen.css" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- 
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+-->
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" defer>
+　　jQuery(document).ready(function(){
+　　　　jQuery('a[href^=http]')
+　　　　.not('[href*="'+location.hostname+'"]')
+　　　　.attr({target:"_blank"})
+　　;})
+</script>
+<!-- ↓スマホ用ドロップダウンメニュー -->
+<script type="text/javascript">
+(function($) {
+    $(function(){
+        $(".open_gNav").click(function(){
+            $("#gNav").slideToggle();
+        });
+        $(".open_oaNav").click(function(){
+            $("#oaNav").slideToggle();
+        });
+    });
+})(jQuery);
+</script>
+    
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'hqt0bke',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+  
+    // 動きのきっかけの起点となるアニメーションの名前を定義
+    function fadeAnime(){
+        $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
+            var elemPos = $(this).offset().top-50;//要素より、50px上の
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight){
+            $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+            }else{
+            $(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+            }
+            });
+    }
+        $(window).scroll(function (){
+            fadeAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+    
+    </script>
+    
+    
+    
+    <script>
+    $(function () {
+        var $pageTop = $(".pagetop")
+        $pageTop.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $pageTop.fadeIn();
+            } else {
+                $pageTop.fadeOut();
+            }
+        });
+    });
+    </script>
+    <p class="pagetop">
+    <a href="#"><span>TOPに<br>もどる</span></a>
+    </p>
+
+
+</head>
+
+<body>
+
+    <!--
+     <div class="rec_g_back pc_display">
+        <div class="rec_menu_back">
+        <ul class="rec_menu">
+        <li class="menu_cld"><a href="" style="color:#333;">ホーム</a></li>
+        <li class="menu_cld"><a href="" style="color:#333;">イベント<span class="font_adjust">について</span></a></li>
+        <li class="menu_cld"><a href="" style="color:#333;">タイムテーブル</a></li>
+        <li class="menu_cld"><a href="" style="color:#333;">会場アクセス</a></li>
+        <li class="menu_cld"><a href="" style="color:#333;">スポンサー</a></li>
+        </ul>
+        </div>
+        </div>
+  -->       
+        <!-- ハンバーガー 
+        <div class="sp_display">
+        <div id="hmenu">
+        <nav id="g-navi">
+        <ul>
+            <li class="menu_cld"><a href="" style="color:#333;">ホーム</a></li>
+            <li class="menu_cld"><a href="" style="color:#333;">イベント<span class="font_adjust">について</span></a></li>
+            <li class="menu_cld"><a href="" style="color:#333;">タイムテーブル</a></li>
+            <li class="menu_cld"><a href="" style="color:#333;">会場アクセス</a></li>
+            <li class="menu_cld"><a href="" style="color:#333;">スポンサー</a></li>
+            </ul>
+        </nav>
+        </div >
+        <div class="openbtn"><span></span><span></span><span></span></div>
+        </div>
+-->
+
+        <header id="header">
+          <div class="balloon1">
+            <p>関西最大のPHPイベント<br class="sp_display">開催決定！</p>
+          </div>
+            <p>
+              <img src="./img/php_con_logo2024.png" alt="PHPカンファレンス関西2024" />
+            </p>
+            <p class="top_elephpant">
+              <img src="./img/elephpant.png" alt="PHPカンファレンス関西2024" />
+            </p>
+          </header>
+          
+          <!-- キャッチここから -->
+          <div class="depart_back">
+          <p>
+            <img src="./img/drop1.png" alt="PHPカンファレンス関西2024" />
+          </p>
+        
+          <div class="fadeUpTrigger">
+          <p class="cnr_ttl">
+            <img src="./img/pikapika.png" alt="PHPカンファレンス関西2024" />
+          </p>
+          <p class="cnr_ttl">
+            集え、PHPer！！<br>
+            あのPHPの祭典が<br class="sp_display">ついに帰ってきた！
+          </p>
+          <div class="yellow_box">
+            2024<span class="font_adjust">年</span> 2<span class="font_adjust">月</span>11<span class="font_adjust">日(日)</span><br>
+            <span class="font_adjust">グランフロント大阪</span>
+          </div>
+
+          <div class="about_conf">
+            <p style="font-size: 1.2em; padding: 5px 0; color:#fff;background-color: #F5AE97; text-align: center;">PHPカンファレンス関西とは</p>
+            <p style="padding:10px;">PHPカンファレンス関西は、PHPエンジニア（:PHPer）がPHPやPHP周辺の技術的知識やノウハウ、体験を共有するための大規模技術カンファレンスです。<br>
+              2011年から過去8回開催されており、毎回その時のPHP最新情報やトレンドの話題で盛り上がります。<br>
+              関西のPHPerがお互いに情報を交換し、エンジニアとしてレベルアップをする場となるべく、2018年から6年ぶりに開催することになりました。<br>
+              イベント当日は一般公募で集まったエンジニアによる講演をはじめ、その他情報共有を行うための催しが行われます。
+            </p>
+            <p style="font-size: 1.2em; padding: 5px 0; color:#fff;background-color: #F5AE97; text-align: center;">参加資格</p>
+            <p style="padding:10px;">
+              PHPを使っている人、PHPを使っていた人、PHPに興味がある人など、PHPに関係する人全てに参加資格があります。<br>
+自身の情報アップデートのためにもぜひお越しください!!
+            </p>
+
+          </div>
+
+        </div>
+  
+          </div>
+          <!-- キャッチここまで -->
+
+
+          <!-- お知らせここから -->
+          <div class="news_back">
+            <p style="text-align: right;">
+              <img src="./img/drop2.png" alt="PHPカンファレンス関西2024" />
+            </p>
+
+            <div class="fadeUpTrigger">
+              <p class="cnr_ttl">
+              <img src="./img/ribbon.png" alt="" /> <span style="font-size:1.1em; font-weight:bold;">お知らせ</span>
+            </p>
+            <p class="cnr_ttl">
+              <img src="./img/diagonal_white.png" alt="" />
+            </p>
+            </div>
+  
+            <ul class="block_list fadeUpTrigger">
+          
+          <!-- お知らせ内容
+          <li class="info_block rec_shadow">
+            <div class="info_design">
+            <dl>
+            <dd class="info_date">2023.10.08</dd>
+            <dd class="info_txt">スポンサー募集を開始しました</dd>
+            </dl>
+            </div>
+            </li>
+
+
+            <!-- お知らせ内容ここまで -->
+
+              <!-- お知らせ内容 
+          <li class="info_block rec_shadow">
+            <div class="info_design">
+            <dl>
+            <dd class="info_date">2023.10.08</dd>
+            <dd class="info_txt">登壇者募集を開始しました</dd>
+            </dl>
+            </div>
+            </li>
+            <!-- お知らせ内容ここまで -->
+  
+
+  
+          <!-- お知らせ内容 
+          <li class="info_block rec_shadow">
+          <div class="info_design">
+          <dl>
+          <dd class="info_date">2023.10.08</dd>
+          <dd class="info_txt">HPを公開しました</dd>
+          </dl>
+          </div>
+          </li>
+          <!-- お知らせ内容ここまで -->
+          
+          </ul>
+          
+          </div>
+          <!--お知らせここまで -->
+          
+          
+
+          <!-- 募集ここから -->
+          <div class="bosyu_back">
+            <p>
+              <img src="./img/drop3.png" alt="PHPカンファレンス関西2024" />
+            </p>
+          
+            <div class="fadeUpTrigger">
+<!--              <div class="menu_cld btn_dsn">
+                <p class="btn_txt"><a href="https://fortee.jp/phpcon-kansai2024/sponsor/form" style="color: #333;">スポンサー募集</a></p>
+                <p class="btn_arrow"><a href="https://fortee.jp/phpcon-kansai2024/sponsor/form" style="color: #333;"><i class="fa fa-angle-right circle_arrow" style="font-size: 1.3em;"></i></a></p>
+              </div>
+-->
+              <div class="menu_cld btn_dsn">
+                <p class="btn_txt"><a href="https://fortee.jp/phpcon-kansai2024/speaker/proposal/cfp" style="color: #333;">登壇者募集</a></p>
+                <p class="btn_arrow"><a href="https://fortee.jp/phpcon-kansai2024/speaker/proposal/cfp" style="color: #333;"><i class="fa fa-angle-right circle_arrow" style="font-size: 1.3em;"></i></a></p>
+              </div>
+   
+ 
+            </div>
+    
+          </div>
+          <!-- 募集ここまで -->
+            
+          
+          <!-- アクセスここから -->
+          <div class="depart_back">
+            <p style="text-align: right;">
+              <img src="./img/drop4.png" alt="PHPカンファレンス関西2024" />
+            </p>
+
+            <div class="fadeUpTrigger">
+              <p class="cnr_ttl">
+              <img src="./img/ribbon.png" alt="" /> <span style="font-size:1.1em; font-weight:bold;">会場アクセス</span>
+            </p>
+            <p class="cnr_ttl">
+              <img src="./img/diagonal_red.png" alt="" />
+            </p>
+
+            <p class="cnr_ttl">
+              グランフロント大阪 <br class="sp_display">北館 タワーC 8階<br>
+              ナレッジキャピタル<br class="sp_display">カンファレンスルーム<br class="sp_display">
+              タワーC Room C01 他
+            </p>
+            <p style="text-align: center;">
+              <img src="./img/granfront.png" alt="PHPカンファレンス関西2024" />
+            </p>
+            <p class="cnr_ttl" style="padding-top: 15px; font-weight: normal;">
+              〒530-0011 <br>
+              大阪市北区大深町3-1<br>
+              グランフロント大阪 <br class="sp_display">北館 タワーC 8階<br>
+            </p>
+
+            
+              <div class="menu_cld btn_dsn">
+                <a href="https://www.kc-space.jp/accessmap/conference/" style="color: #333;">会場Webサイト<span class="font_adjust">を</span>開く</a>
+              </div>
+              
+
+
+          </div>
+          </div>
+          <!-- アクセスここまで -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <!-- 協賛エリアここから
+          <div class="shop_area fadeUpTrigger">
+          <p class="cnr_ttl">
+          <span style="border-bottom:1px solid #333;">私<span class="font_adjust">たちも</span>応援<span class="font_adjust">しています</span></span>
+          </p>
+ -->      
+
+          <!-- 特別協賛 
+          <dl class="company_list">
+          <dt class="company_txt">特別協賛</dt>
+          <dd class="company_img" style="text-align:center;">
+            <a href=""">
+              <img class="special_company" src="" alt="" />
+            </a>
+          </dd>
+          </dl>
+           特別協賛ここまで -->
+          
+          <!-- 協賛 
+          <dl class="company_list">
+          <dt class="company_txt">協賛</dt>
+          <dd class="company_img">
+            <ul class="company_bnr">
+              <li>
+                <a href="">
+                  <img src="" alt="" />
+                </a>
+              </li>
+            </ul>
+          </dd>
+          
+          </dl>
+           協賛ここまで -->
+          
+          
+      <!--    
+          </div>
+       協賛エリアここまで -->
+          
+          
+          
+          
+          
+          <!-- フッターここから -->
+          
+          
+          
+          <footer>
+            <p style="text-align: left;">
+              <img src="./img/drop5.png" alt="" />
+            </p>
+            <p>PHPカンファレンス関西実行委員会</p>
+            <div style="padding:15px 0;">
+              <p><a href="https://twitter.com/phpcon_kansai"><img src="./img/x_logo.png" alt="" style="padding:10px; background-color:#F5AE97 ;" /></a></p>
+            </div>
+            <p class="font_adjust">Copyright @ Kansai PHP Users Group</p>
+          </footer>
+          
+          <!-- フッターここまで -->
+          
+          
+          
+          <script>
+          //アコーディオンをクリックした時の動作
+          $('.note_title').on('click', function() {
+            $('.note_open_txt').hide();
+            var findElm = $(this).next(".note_box");
+            $(findElm).slideToggle(1);
+            if($(this).hasClass('close')){
+              $(this).removeClass('close');
+              $('.note_open_txt').show();
+            }else{
+              $(this).addClass('close');
+            }
+          });
+          $('.deli_title').on('click', function() {
+            $('.deli_open_txt').hide();
+            var findElm = $(this).next(".deli_box");
+            $(findElm).slideToggle(1);
+            if($(this).hasClass('close')){
+              $(this).removeClass('close');
+              $('.deli_open_txt').show();
+            }else{
+              $(this).addClass('close');
+            }
+          });
+          
+          </script>
+          
+          <script>
+          //ハンバーガーメニュー処理
+          function FixedAnime() {
+            $('.openbtn').addClass('fadeDown');
+            $('#hmenu').addClass('dnone');
+          }
+          $(window).on('load', function () {
+            FixedAnime();
+          });
+          $(".openbtn").click(function () {
+            $(this).toggleClass('active');
+            $("#hmenu").toggleClass('panelactive');
+            $(".pagetop").css({'display':'none'});
+          });
+          </script>

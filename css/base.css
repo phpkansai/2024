@@ -1,0 +1,501 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------------------
+
+1. PCスマホ共通部分
+
+-----------------------------------------------------------*/
+.grecaptcha-badge { visibility: hidden; }
+
+
+/* PCスマホ共有部分
+-----------------------------------------------------------*/
+a{
+  transition: all 0.3s;
+}
+
+a:link,
+a:hover,
+a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+
+/* 文字サイズ調整 */
+.font_adjust{
+	font-size: 0.8em;
+}
+
+/* プレゼントフォーム*/
+.wpcf7-form p{
+	color:#595858;
+	font-weight:bold;
+	line-height:30px;
+	border-bottom:1px solid #ccc;
+	padding:15px 10px;
+}
+.wpcf7-form p:nth-of-type(odd){
+	background:#f2f2f2;
+}
+.wpcf7-form p:last-of-type{
+	background:#ffffff;
+	border-bottom:none;
+}
+
+.wpcf7-form p:hover{
+background:#fffad7;
+}
+
+.m-alert{
+padding:1px;
+background:#ff8080;
+color:#fff;
+margin-right:0.7em;
+font-weight:normal;
+}
+
+
+#pre{
+	padding:3px 0;
+	margin:0;
+	width:100%;}
+
+.sent .formInner {
+    display: none;
+}
+.wpcf7-number{
+  width:100px;
+}
+
+input[type=text],input[type=tel],input[type=email]{
+padding:3px 0;
+}
+
+textarea{
+width:100%;
+}
+
+.file{
+margin:10px;
+display:block;
+}
+
+span.wpcf7-list-item { display: block; }
+input[type=text],input[type=email],input[type=tel]{
+   width:100%;
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,#pre:focus{
+   border:solid 1px #20b2aa;
+}
+
+input[type=text], select,input[type=email],input[type=tel]{
+   outline: none;
+}
+
+.contact_right textarea{
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   -ms-border-radius: 5px;
+   border:#a9a9a9 1px solid;
+   -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.3);
+   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+   width:100%;
+   padding:0 3px;
+}
+
+.contact_right textarea:focus{
+   border:solid 1px #20b2aa;
+}
+
+.contact_right textarea {
+   outline: none;
+width:100%;
+}
+
+input[type=submit]{
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   -ms-border-radius: 5px;
+   border:#a9a9a9 1px solid;
+   -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.3);
+   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+   width:200px;
+   height:50px;
+   font-size:20px;
+   padding:0 3px;
+   display:block;
+   margin:1em auto;
+   cursor:pointer;
+   color:#333;
+   font-weight:bold;
+   background:#f5f5f5;
+   text-shadow:1px 1px 0px #fff;
+}
+
+.contact_form input[type=submit]{
+width:50%;
+}
+
+.contact_form input[type=text],.contact_form input[type=email]{
+width:100%;
+height:50px;
+font-size:1.5em;
+}
+
+input[type="radio"]{
+margin: 0 0 4px 0 !important;
+}
+
+
+.wpcf7 span.wpcf7-not-valid-tip {
+    display: block;
+    color: red;
+	font-weight:normal;
+}
+
+.wpcf7 .wpcf7-response-output {
+    margin: 10px 0 0;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+    .wpcf7 .wpcf7-validation-errors {
+        font-weight:bold;
+		color: #B94A48;
+        background-color: #F2DEDE;
+        border: 1px solid #EED3D7;
+    }
+    .wpcf7 .wpcf7-mail-sent-ok {
+		font-weight:bold;
+        color: #3A87AD;
+        background-color: #D9EDF7;
+        border: 1px solid #BCE8F1;
+    }
+
+
+#zip11{
+    width:115px;
+}
+
+/* slide
+-----------------------------------------------------------*/
+.slick-slider {
+    background: url(../js/slick/ajax-loader.gif)
+}
+.slick-slider .slick-list {
+    opacity: 0;
+    position: absolute;
+}
+.slick-slider.slick-initialized {
+    background: none;
+}
+.slick-slider.slick-initialized .slick-list {
+    opacity: 1;
+    position: relative;
+    transition: opacity 0.2s ease-in;
+}
+
+
+.clear_fix{
+    clear:both;
+}
+
+
+/* #keyImage
+-----------------------------------------------------------*/
+
+#keyImage {
+	margin-bottom: 20px;
+}
+
+
+
+
+
+/* #footer
+-----------------------------------------------------------*/
+
+#footerInner .pagetop {
+	position: absolute;
+	top: -24px;
+	right: 0;
+}
+#footerInner .pagetop a {
+	display: block;
+	width: 100px;
+	height: 17px;
+	background: url(../images/bt_pagetop.gif) no-repeat right top;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#footerInner .pagetop a:hover{
+	background-position:0 -17px;
+	}
+
+
+#copyright{
+	clear:both;
+	width:100%;
+	background:#F7E000;
+	}
+#copyimg{
+	text-align:right;
+	}
+
+
+/*デコレーション
+-----------------------------------------------------------*/
+
+/*番組名*/
+#programInfo h2{
+	padding:5px;}
+
+/*背景色（背景用なので薄めの配色です） -----------------*/
+
+	.bg_red{
+		padding:0.2em 0.4em;
+		background-color:#FF9999;}
+
+	.bg_orange{
+		padding:0.2em 0.4em;
+		background-color:#FFCC99;}
+
+	.bg_yellow{
+		padding:0.2em 0.4em;
+		background-color:#FFFFCC;}
+
+	.bg_y_green{/*黄緑*/
+		padding:0.2em 0.4em;
+		background-color:#CCFF99;}
+
+	.bg_green{
+		padding:0.2em 0.4em;
+		background-color:#00CC66;}
+
+	.bg_b_green{/*青緑*/
+		padding:0.2em 0.4em;
+		background-color:#99CCCC;}
+
+	.bg_l_blue{/*明るい水色*/
+		padding:0.2em 0.4em;
+		background-color:#99FFFF;}
+
+	.bg_s_blue{/*空色*/
+		padding:0.2em 0.4em;
+		background-color:#99CCFF;}
+
+	.bg_blue{
+		padding:0.2em 0.4em;
+		background-color:#3366FF;}
+
+	.bg_navy{
+		padding:0.2em 0.4em;
+		background-color:#333399;}
+
+	.bg_purple{
+		padding:0.2em 0.4em;
+		background-color:#9966CC;}
+
+	.bg_s_pink{/*ショッキングピンク*/
+		padding:0.2em 0.4em;
+		background-color:#FF99FF;}
+
+	.bg_pink{
+		padding:0.2em 0.4em;
+		background-color:#FFCCCC;}
+
+	.bg_brown{
+		padding:0.2em 0.4em;
+		background-color:#CC9966;}
+
+	.bg_gray{
+		padding:0.2em 0.4em;
+		background-color:#cccccc;}
+
+/*------------------------------*/
+
+.common #programInfo h3 {
+	margin-bottom: 10px;
+	/*padding-left: 5px;
+	border-left: 8px solid #333333;*/
+	font-size: 130%;
+}
+
+/*コンテンツ題名*/
+#programInfo h3{
+	font-weight:bold;}
+
+.common #programInfo h3 .bd_red{
+	border-left-color:#FF0000;}
+
+/*コンテンツ題名ボーダー色（文字色と同じ色です） -----*/
+
+	.bd_red{
+		padding-left: 5px;
+		border-left: 8px solid #FF0000;}
+
+	.bd_orange{
+		padding-left: 5px;
+		border-left: 8px solid #FF6600;}
+
+	.bd_yellow{
+		padding-left: 5px;
+		border-left: 8px solid #FFCC00;}
+
+	.bd_y_green{/*黄緑*/
+		padding-left: 5px;
+		border-left: 8px solid #66CC00;}
+
+	.bd_green{
+		padding-left: 5px;
+		border-left: 8px solid #336600;}
+
+	.bd_b_green{/*青緑*/
+		padding-left: 5px;
+		border-left: 8px solid #006666;}
+
+	.bd_l_blue{/*明るい水色*/
+		padding-left: 5px;
+		border-left: 8px solid #00CCFF;}
+
+	.bd_s_blue{/*空色*/
+		padding-left: 5px;
+		border-left: 8px solid #3399FF;}
+
+	.bd_blue{
+		padding-left: 5px;
+		border-left: 8px solid #0000FF;}
+
+	.bd_navy{
+		padding-left: 5px;
+		border-left: 8px solid #000066;}
+
+	.bd_purple{
+		padding-left: 5px;
+		border-left: 8px solid #660099;}
+
+	.bd_s_pink{/*ショッキングピンク*/
+		padding-left: 5px;
+		border-left: 8px solid #FF0099;}
+
+	.bd_pink{
+		padding-left: 5px;
+		border-left: 8px solid #FF6699;}
+
+	.bd_brown{
+		padding-left: 5px;
+		border-left: 8px solid #663333;}
+
+	.bd_gray{
+		padding-left: 5px;
+		border-left: 8px solid #999999;}
+
+
+/*------------------------------*/
+
+/*文章*/
+#programInfo p{
+	line-height:1.6em;}
+
+/*サブ見出し*/
+.infoTxt1{
+	font-weight:bold;}
+
+.margin_top_btm{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.font_bold{
+    font-weight:bold;
+}
+/*放送時間*/
+.infoTxt2{
+	font-weight:bold;}
+
+.txt_right{
+    text-align:right;
+}
+
+.txt_center{
+    text-align:center;
+}
+
+.txt_left{
+    text-align:left;
+}
+
+
+/*文字色 -----------------------*/
+
+	.txt_red{
+		color:#FF0000;}
+
+	.txt_orange{
+		color:#FF6600;}
+
+	.txt_yellow{
+		color:#FFCC00;}
+
+	.txt_y_green{/*黄緑*/
+		color:#66CC00;}
+
+	.txt_green{
+		color:#336600;}
+
+	.txt_b_green{/*青緑*/
+		color:#006666;}
+
+	.txt_l_blue{/*明るい水色*/
+		color:#00CCFF;}
+
+	.txt_s_blue{/*空色*/
+		color:#3399FF;}
+
+	.txt_blue{
+		color:#0000FF;}
+
+	.txt_navy{
+		color:#000066;}
+
+	.txt_purple{
+		color:#660099;}
+
+	.txt_s_pink{/*ショッキングピンク*/
+		color:#FF0099;}
+
+	.txt_pink{
+		color:#FF6699;}
+
+	.txt_brown{
+		color:#663333;}
+
+	.txt_gray{
+		color:#999999;}
+
+	.txt_whyte{
+		color:#FFFFFF;}
+
+/*------------------------------*/
+
+/*メニュー -----------------------*/
+.menu_bnr{
+    margin-bottom:15px;
+}
+
+.top_adsense,
+.list_adsense,
+.sp_ad_area{
+    margin:5px auto;
+    text-align:center;
+}
