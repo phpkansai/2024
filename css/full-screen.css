@@ -34,6 +34,12 @@ a:visited {
 
 /* #footer
 -----------------------------------------------------------*/
+.sns_area{
+	width:100px;
+	margin: 0 auto;
+	display: flex;
+	gap: 10px;
+}
 
 #footerInner .pagetop {
 	position: absolute;
