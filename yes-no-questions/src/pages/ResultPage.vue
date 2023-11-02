@@ -10,7 +10,7 @@
       <div v-if="isShowTalkCard" class="col-11">
         <Transition appear name="slide-card-effect" mode="out-in">
           <q-card>
-            <img :src="'/results/' + suggesttedTalk.uuid + '.png'">
+            <img :src="'./results/' + suggesttedTalk.uuid + '.png'">
             <q-card-actions align="center">
               <q-btn
                 color="primary"
