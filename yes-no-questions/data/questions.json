@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "question": "技術カンファレンスに来るのは初めて?",
+        "yes": 2,
+        "no": 3,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 2,
+        "question": "PHP初心者?",
+        "yes": 1,
+        "no": null,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021"
+    },
+    {
+        "id": 3,
+        "question": "PHPのバージョンアップで困っている?",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021",
+        "resultTalkUuidWhenNo": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021"
+    }
+]
