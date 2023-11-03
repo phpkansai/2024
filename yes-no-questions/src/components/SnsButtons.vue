@@ -6,7 +6,7 @@
         :hide-label="hideLabel"
         :label="buttonLabelMessage"
         vertical-actions-align="left"
-        color="purple"
+        color="deep-orange-10"
         icon="share"
         direction="up"
     >
