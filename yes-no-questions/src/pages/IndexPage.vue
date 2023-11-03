@@ -35,21 +35,30 @@
 
         </div>
 
+        <div class="row justify-center">
+          <div class="col-11 q-mt-lg q-mx-md">
+            <back-web-site-button />
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <BackWebSiteButton />
+    <SnsButtons />
+
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import BackWebSiteButton from "../components/BackWebSiteButton.vue"
+import SnsButtons from "../components/SnsButtons.vue"
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
     BackWebSiteButton,
+    SnsButtons,
   },
 })
 </script>

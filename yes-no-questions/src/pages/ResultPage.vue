@@ -59,7 +59,7 @@
           </div>
         </div>
 
-        <div v-if="isShowButtons" class="row justify-center q-mt-lg">
+        <div class="row justify-center q-mt-lg">
           <div class="col-xs-11 col-md-7 text-center">
             <q-btn
                 color="primary"
@@ -71,11 +71,16 @@
             />
           </div>
         </div>
+
+        <div class="row justify-center q-my-lg">
+          <div class="col-xs-11 col-md-7 text-center">
+            <back-web-site-button />
+          </div>
+        </div>
       </div>
     </Transition>
 
-
-    <BackWebSiteButton />
+    <SnsButtons />
 
   </q-page>
 </template>
@@ -85,11 +90,13 @@ import { defineComponent } from 'vue'
 import ProposalsData from "../../data/proposals.json"
 import ResultThumbnail from "../assets/resultThumbnail.png"
 import BackWebSiteButton from "../components/BackWebSiteButton.vue"
+import SnsButtons from "../components/SnsButtons.vue"
 
 export default defineComponent({
   name: 'QuestionPage',
   components: {
     BackWebSiteButton,
+    SnsButtons,
   },
   data() {
     return {

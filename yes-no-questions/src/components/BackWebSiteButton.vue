@@ -1,14 +1,11 @@
 <template>
-  <q-page-sticky position="bottom-left" :offset="[18, 18]">
-    <q-btn
-        fab
-        padding="sm md"
-        label="Webサイト"
-        icon="keyboard_arrow_left"
-        color="blue-grey-10"
-        href="/"
-    />
-  </q-page-sticky>
+  <q-btn
+      padding="md"
+      unelevated
+      rounded
+      color="grey-8"
+      label="PHPカンファレンス2024特設サイト"
+  />
 </template>
 
 <script>
