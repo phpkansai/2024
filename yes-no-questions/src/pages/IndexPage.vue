@@ -31,14 +31,13 @@
                 />
               </div>
             </div>
+            <div class="row justify-center">
+              <div class="col-11 q-mt-lg q-mx-md">
+                <back-web-site-button />
+              </div>
+            </div>
           </div>
 
-        </div>
-
-        <div class="row justify-center">
-          <div class="col-11 q-mt-lg q-mx-md">
-            <back-web-site-button />
-          </div>
         </div>
 
       </div>

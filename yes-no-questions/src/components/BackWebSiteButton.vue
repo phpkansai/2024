@@ -1,11 +1,13 @@
 <template>
   <q-btn
-      padding="md"
+      padding="12px"
       unelevated
       rounded
-      color="grey-8"
-      label="PHPカンファレンス2024特設サイト"
-  />
+      color="grey-5"
+      label=""
+  >
+    PHPカンファレンス関西2024<br />特設サイト
+  </q-btn>
 </template>
 
 <script>
