@@ -12,9 +12,9 @@
     </div>
 
     <div class="row justify-center q-my-lg">
-      <div v-if="isShowTalkCard" class="col-xs-11 col-md-7">
+      <div class="col-xs-11 col-md-7">
         <Transition appear name="slide-card-effect" mode="out-in">
-          <q-card>
+          <q-card v-show="isShowTalkCard">
             <q-img :src="resultThumbnailBackground">
               <div class="absolute-full text-center flex flex-center result-card-background">
                 <div>
