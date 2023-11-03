@@ -1,22 +1,24 @@
 <template>
   <q-page class="flex-center">
 
-    <div class="column items-center">
-      <Transition appear name="slide-top-text-effect" mode="out-in">
-        <div class="col-11 q-my-lg">
-          あなたが聴くべきトークは...
-        </div>
-      </Transition>
+    <div class="row justify-center">
+      <div class="col-xs-11 text-center q-mt-lg">
+        <Transition appear name="slide-top-text-effect" mode="out-in">
+          <div class="col-11 q-my-lg">
+            あなたが聴くべきトークは...
+          </div>
+        </Transition>
+      </div>
     </div>
 
-    <div class="q-mx-lg">
-      <div v-if="isShowTalkCard" class="col-12">
+    <div class="row justify-center q-my-lg">
+      <div v-if="isShowTalkCard" class="col-xs-11 col-md-7">
         <Transition appear name="slide-card-effect" mode="out-in">
           <q-card>
             <q-img :src="resultThumbnailBackground">
               <div class="absolute-full text-center flex flex-center result-card-background">
                 <div>
-                  <div class="text-h6 q-pt-lg text-grey-9">
+                  <div class="text-h5 text-weight-bolder q-pt-lg text-grey-9">
                     {{ suggestedTalk.title }}
                   </div>
                   <div class="text-subtitle1 q-pa-sm text-grey-8">
@@ -40,37 +42,38 @@
       </div>
     </div>
 
-
     <Transition appear name="slide-buttons-effect" mode="out-in">
       <div v-if="isShowButtons">
-        <div class="row justify-center q-my-md">
-          <div class="col-8">
+        <div class="row justify-center">
+          <div class="col-xs-11 col-md-7 text-center">
             <q-btn
-              color="primary"
-              class="full-width"
-              stack size="16px"
-              icon="𝕏"
-              label="結果を共有する"
-              :href="tweetHrefUrl"
-              target="_blank"
+                color="primary"
+                class="full-width"
+                stack
+                size="16px"
+                icon="𝕏"
+                label="結果を共有する"
+                :href="tweetHrefUrl"
+                target="_blank"
             />
           </div>
         </div>
-        <div class="column justify-center">
-          <div class="row justify-center q-my-md">
-            <div class="col-8">
-              <q-btn
+
+        <div v-if="isShowButtons" class="row justify-center q-mt-lg">
+          <div class="col-xs-11 col-md-7 text-center">
+            <q-btn
                 color="primary"
-                class="full-width"
+                class="full-width q-py-md"
                 flat
+                size="14px"
                 label="もう一度診断する"
                 :to="{name: 'IndexPage'}"
-              />
-            </div>
+            />
           </div>
         </div>
       </div>
     </Transition>
+
 
     <BackWebSiteButton />
 

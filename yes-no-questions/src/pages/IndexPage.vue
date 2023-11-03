@@ -1,32 +1,40 @@
 <template>
-  <q-page class="flex-center">
-    <div class="column items-center">
-      <div class="col-11 q-my-md">
-        <img
-          alt="Quasar logo"
-          src="~assets/logo.svg"
-          style="width: 200px; height: 200px"
-        >
-      </div>
-    </div>
+  <q-page class="fullscreen">
+    <div class="row justify-center">
+      <div class="col-xs-11 absolute-center text-center q-my-md">
 
-    <div class="column items-center">
-      <div class="col-11 q-my-md q-mx-md">
-        説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ
-      </div>
-    </div>
+        <div class="row justify-center">
+          <div class="col-xs-11 col-md-5 text-center q-my-md">
+            <img
+              alt="Quasar logo"
+              src="~assets/logo.svg"
+              style="width: 200px; height: 200px"
+            >
+          </div>
 
-    <div class="row items-center">
-      <div class="col-11 q-my-md q-mx-md">
-        <q-btn
-          :to="{name: 'QuestionsPage'}"
-          push
-          class="full-width"
-          color="white"
-          size="22px"
-          text-color="primary"
-          label="診断開始"
-        />
+          <div class="col-xs-11 col-md-5 ">
+            <div class="row justify-center">
+              <div class="col-xs-11 col-md-11 text-center q-my-md q-mx-lg">
+                説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ説明が入るところ
+              </div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-11 q-my-md q-mx-md">
+                <q-btn
+                  :to="{name: 'QuestionsPage'}"
+                  push
+                  class="full-width"
+                  color="white"
+                  size="22px"
+                  text-color="primary"
+                  label="診断開始"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
 

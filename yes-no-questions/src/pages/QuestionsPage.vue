@@ -1,14 +1,15 @@
 <template>
   <q-page class="flex-center">
+
     <div class="row justify-center">
-      <div class="col-11 q-mt-md" align="center">
+      <div class="col-xs-11 text-center q-my-md">
         <p class="q-my-sm">PHPカンファレンス関し2024<br>おすすめトーク診断</p>
       </div>
-      <div class="col-11 text-h5" align="center">
+      <div class="col-xs-11 text-center text-h5">
         {{ questionCount }}問目
       </div>
 
-      <div class="col-11" v-if="nowQuestion">
+      <div class="col-xs-11 col-md-7" v-if="nowQuestion">
         <Transition name="slide-effect" mode="out-in">
           <!-- 意味がないように見えるが、v-ifで表示切り替えをすることでアニメーションを実現している -->
           <QuestionCard
@@ -20,26 +21,32 @@
             :question="nowQuestion.question"
           />
         </Transition>
+      </div>
 
-        <div class="row justify-center">
-          <q-btn
-            @click="nextQuestion(nowQuestion.yes, nowQuestion.resultTalkUuidWhenYes)"
-            color="green"
-            class="full-width q-my-md"
-            :disable="isButtonDisable"
-            label="Yes"
-            padding="md"
-            size="16px"
-          />
-          <q-btn
-            @click="nextQuestion(nowQuestion.no, nowQuestion.resultTalkUuidWhenNo)"
-            color="deep-orange"
-            class="full-width q-my-md"
-            :disable="isButtonDisable"
-            label="No"
-            padding="md"
-            size="16px"
-          />
+      <div class="col-xs-11 col-md-7">
+        <div class="row justify-around">
+          <div class="col-xs-12 col-md-5 text-center">
+            <q-btn
+              @click="nextQuestion(nowQuestion.yes, nowQuestion.resultTalkUuidWhenYes)"
+              color="green"
+              class="full-width q-my-md"
+              :disable="isButtonDisable"
+              label="Yes"
+              padding="md"
+              size="16px"
+            />
+          </div>
+          <div class="col-xs-12 col-md-5 text-center">
+            <q-btn
+              @click="nextQuestion(nowQuestion.no, nowQuestion.resultTalkUuidWhenNo)"
+              color="deep-orange"
+              class="full-width q-my-md"
+              :disable="isButtonDisable"
+              label="No"
+              padding="md"
+              size="16px"
+            />
+          </div>
         </div>
       </div>
     </div>
