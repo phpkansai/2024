@@ -2,8 +2,8 @@
   <q-page class="flex-center">
 
     <div class="row justify-center">
-      <div class="col-xs-11 text-center q-my-md">
-        <p class="q-my-sm">PHPカンファレンス関し2024<br>おすすめトーク診断</p>
+      <div class="col-xs-11 text-center q-mt-md">
+        <p class="q-my-sm">PHPカンファレンス関西2024<br>おすすめトーク診断</p>
       </div>
       <div class="col-xs-11 text-center text-h5">
         {{ questionCount }}問目
@@ -45,6 +45,23 @@
               label="No"
               padding="md"
               size="16px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-center">
+      <div class="col-xs-11 text-center q-my-md">
+        <div class="row justify-center q-mt-lg">
+          <div class="col-xs-11 col-md-7 text-center">
+            <q-btn
+                color="primary"
+                class="q-py-md"
+                flat
+                size="14px"
+                label="はじめからやり直す"
+                :to="{name: 'IndexPage'}"
             />
           </div>
         </div>

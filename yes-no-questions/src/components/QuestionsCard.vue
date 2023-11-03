@@ -1,8 +1,7 @@
 <template>
   <q-card class="q-my-md">
     <q-card-section
-      align="center"
-      class="question-card-section bg-brown-1 text-blue-grey-10 flex flex-center"
+      class="question-card-section bg-brown-1 text-blue-grey-10 flex flex-center text-center"
     >
       <div class="text-h6">{{ question }}</div>
     </q-card-section>
@@ -30,6 +29,6 @@ export default defineComponent({
 </script>
 <style scoped>
 .question-card-section {
-  min-height: 300px;
+  min-height: 250px;
 }
 </style>
