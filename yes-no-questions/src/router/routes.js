@@ -18,6 +18,11 @@ const routes = [
         name: 'ResultPage',
         path: 'result/:uuid',
         component: () => import('pages/ResultPage.vue')
+      },
+      {
+        name: 'test',
+        path: 'test',
+        component: () => import('pages/TestParticles.vue')
       }
     ]
   },
