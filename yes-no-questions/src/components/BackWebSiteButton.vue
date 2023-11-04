@@ -5,6 +5,7 @@
       rounded
       color="grey-5"
       label=""
+      href="/"
   >
     PHPカンファレンス関西2024<br />特設サイト
   </q-btn>
