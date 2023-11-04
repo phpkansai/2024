@@ -35,7 +35,7 @@ export default defineComponent({
     return {
       shareButton: false,
       lineIcon: LineIcon,
-      shareUrl: "https://2024.kphpug.jp/yes-no-test",
+      shareUrl: "https://2024.kphpug.jp/yntest",
       twitterHashtags: "phpkansai,ぺちこん関西おすすめトーク診断",
       hideLabel: true,
       buttonLabelMessage: "",

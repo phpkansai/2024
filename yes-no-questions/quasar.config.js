@@ -66,14 +66,14 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: 'yes-no-test',
+      publicPath: 'yntest',
       // analyze: true,
       // env: {},
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
       // polyfillModulePreload: true,
-      distDir: '../public/yes-no-test'
+      distDir: '../public/yntest'
 
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
