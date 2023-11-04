@@ -44,11 +44,13 @@ export default defineComponent({
   computed: {},
   methods: {
     shareByLine() {
+      if(this.isDev()) return
       const url = "https://line.me/R/msg/text/?"
           + encodeURIComponent(this.shareUrl)
       window.open(url, "_blank")
     },
     shareByTwitter() {
+      if(this.isDev()) return
       const postMessage = "PHPカンファレンス関西2024 おすすめトーク診断!!"
       const url = "https://twitter.com/share?url="
           + encodeURIComponent(this.shareUrl)
@@ -56,12 +58,14 @@ export default defineComponent({
       window.open(url, "_blank")
     },
     shareByHatebu() {
+      if(this.isDev()) return
       const url = "http://b.hatena.ne.jp/add?mode=confirm&url="
       + encodeURIComponent(this.shareUrl)
       + "&title=PHPカンファレンス関西2024おすすめトーク診断!!"
       window.open(url, "_blank")
     },
     shareByCopy() {
+      if(this.isDev()) return
       navigator.clipboard.writeText(this.shareUrl)
       this.buttonLabelMessage = "URLをコピーしました"
       this.hideLabel = false
@@ -69,6 +73,10 @@ export default defineComponent({
         this.buttonLabelMessage = ""
         this.hideLabel = true
       }, 2000)
+    },
+    isDev() {
+      // .env使えるようにしたい
+      return true
     }
   }
 })

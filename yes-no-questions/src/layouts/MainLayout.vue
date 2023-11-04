@@ -24,6 +24,9 @@ export default defineComponent({
       particlesOptions: particlesOptions,
     }
   },
+  mounted() {
+    alert("このページは実行委員向けのテストページです。\n他者に教えないようにしてください。")
+  },
   computed: {
     particlesInit() {
       return async engine => {
