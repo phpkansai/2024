@@ -1,6 +1,6 @@
 # yes-no-app (yes-no-questions)
 
-Yes No �f�f�A�v��
+PHPカンファレンス関西2024のおすすめトークを診断するアプリです。
 
 ## Install the dependencies
 ```bash
