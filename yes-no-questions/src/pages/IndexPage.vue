@@ -6,9 +6,9 @@
         <div class="row justify-center">
           <div class="col-xs-11 col-md-5 text-center q-my-md">
             <img
-              alt="Quasar logo"
-              src="~assets/logo.svg"
-              style="width: 200px; height: 200px"
+              alt="おすすめトーク診断"
+              src="~assets/logo.png"
+              style="width: 380px; height: 380px"
             >
           </div>
 
