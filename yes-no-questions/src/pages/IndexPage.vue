@@ -8,7 +8,7 @@
             <img
               alt="おすすめトーク診断"
               src="~assets/logo.png"
-              style="width: 380px; height: 380px"
+              style="width:100%; max-width: 300px;"
             >
           </div>
 
