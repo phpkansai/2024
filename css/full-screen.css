@@ -13,7 +13,9 @@ a{
 	text-decoration: none;
 }
 
-
+.font_adjust{
+	font-size: 0.8em;
+}
 .big-bg{
 	background-size: cover;
 	background-position: center top;
