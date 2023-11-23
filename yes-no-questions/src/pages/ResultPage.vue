@@ -15,7 +15,7 @@
       <div class="col-xs-11 col-md-7">
         <Transition appear name="slide-card-effect" mode="out-in">
           <q-card v-show="isShowTalkCard">
-            <q-img :src="resultThumbnailBackground">
+            <q-img :src="resultThumbnailBackground" >
               <div class="absolute-full text-center flex flex-center result-card-background">
                 <div>
                   <div class="text-h5 text-weight-bolder q-pt-lg text-grey-9">
@@ -27,6 +27,12 @@
                 </div>
               </div>
             </q-img>
+            <div class="memory-chan-stage">
+              <img
+                  src="~/assets/memory-chan/memory-chan04.png"
+                  class="memory-chan01"
+              />
+            </div>
             <q-card-actions align="center">
               <q-btn
                 color="primary"
@@ -162,5 +168,19 @@ export default defineComponent({
 .slide-buttons-effect-leave-to {
   transform: translateY(20px);
   opacity: 0;
+}
+
+.memory-chan-stage {
+  position:relative;
+  z-index: 20;
+}
+
+.memory-chan01 {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  width: 25%;
+  opacity: 0.5;
+  z-index: -1;
 }
 </style>

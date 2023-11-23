@@ -12,9 +12,17 @@
             >
           </div>
 
-          <div class="col-xs-11 col-md-5 ">
+          <div class="col-xs-11 col-md-5 memory-chan-stage">
             <div class="row justify-center">
               <div class="col-xs-11 col-md-11 text-center q-mx-lg">
+                <img
+                    src="~/assets/memory-chan/memory-chan01.png"
+                    class="memory-chan01"
+                />
+                <img
+                    src="~/assets/memory-chan/memory-chan02.png"
+                    class="memory-chan02"
+                />
                 <p class="text-h6">あなたにぴったりのトークは？</p>
                 <p>
                   2/11（日）にどのトークを聞けばいいか迷っていませんか？
@@ -51,7 +59,7 @@
       </div>
     </div>
 
-    <SnsButtons />
+    <SnsButtons class="float-button"/>
 
   </q-page>
 </template>
@@ -69,3 +77,33 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.memory-chan-stage {
+  position:relative;
+  z-index: 10;
+}
+.memory-chan01 {
+  position: absolute;
+  top: 10%;
+  right: -6%;
+  width: 100px;
+  height: 100px;
+  opacity: 0.3;
+  z-index: -1;
+}
+.memory-chan02 {
+  position: absolute;
+  top: 45%;
+  left: -15%;
+  width: 100px;
+  height: 100px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.float-button {
+  z-index: 10;
+}
+
+</style>
