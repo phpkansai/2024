@@ -600,7 +600,7 @@ a:visited {
 		padding-bottom:60px;
 	}
 	.staff_list{
-		width:80%;
+		width:50%;
 		margin: 0 auto;
 	}
 
@@ -623,7 +623,7 @@ a:visited {
     
     @media screen and (max-width: 767px){
 		.staff_list{
-			width:60%;
+			width:90%;
 			margin: 0 auto;
 		}
 			h1 img{
