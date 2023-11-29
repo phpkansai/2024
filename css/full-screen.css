@@ -599,7 +599,10 @@ a:visited {
 		background-color:#BEA6A0;
 		padding-bottom:60px;
 	}
-
+	.staff_list{
+		width:80%;
+		margin: 0 auto;
+	}
 
 
 
@@ -619,7 +622,11 @@ a:visited {
 
     
     @media screen and (max-width: 767px){
-		h1 img{
+		.staff_list{
+			width:60%;
+			margin: 0 auto;
+		}
+			h1 img{
 		  width:85%;
 		}
 		.pc_display{
