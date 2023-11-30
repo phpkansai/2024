@@ -451,6 +451,11 @@ a:visited {
 		 padding-top:40px;
 	   }
 	   
+	   .spon_list{
+		margin:50px auto;
+		display:flex;
+		justify-content:space-evenly;
+	   }
 	   .company_list{
 		 width:1080px;
 		 margin:50px auto;
