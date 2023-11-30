@@ -42,6 +42,7 @@ a:visited {
 #archive_list{
 	display: flex;
 	margin: 30px;
+	justify-content: center;
 }
 .archive_circle{
   width: 80px;
@@ -52,6 +53,7 @@ a:visited {
   line-height: 80px;
 }
 .archive_circle a{
+	display: block;
 	color: #fff;
 }
 #footerInner .pagetop {
