@@ -456,39 +456,6 @@ a:visited {
 		display:flex;
 		justify-content:space-evenly;
 	   }
-	   .company_list{
-		 width:1080px;
-		 margin:50px auto;
-		 display:flex;
-		 justify-content:space-evenly;
-	   }
-	   .company_txt{
-		 width:260px;
-		 text-align:center;
-		 border:1px solid #333;
-		 padding:3px;
-		 height:3em;
-		 line-height:3em;
-	   }
-	   .company_img{
-		 width:880px;
-		 margin-left:40px;
-	   }
-	   .company_bnr{
-		 display:flex;
-		 justify-content:start;
-		 gap:40px;
-		 flex-wrap: wrap;
-	   }
-	   .baby_area{
-		 background-size:contain;
-		 background-repeat:no-repeat;
-	   }
-	   .baby_back{
-		 padding-bottom:60px;
-		 width:1280px;
-		 margin:0 auto;
-	   }
 	   .home_btn{
 	   text-align:center;
 	   font-weight:bold;
@@ -687,6 +654,9 @@ a:visited {
 		flex-direction:column;
 		width:100%;
 	}
+	.spon_list{
+		flex-direction:column;
+	   }
 	.rec_menu_back{
 		width:98%;
 		border-radius:15px;
