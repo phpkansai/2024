@@ -439,8 +439,8 @@ a:visited {
 		 list-style:none;
 	   }
 	   .about_conf{
-		 border:dashed 2px #F5AE97;
-		 border-top:none;
+/*		 border:dashed 2px #F5AE97;
+		 border-top:none; */
 		 line-height:1.6;
 		 margin: 30px auto;
 		 width: 70%;
