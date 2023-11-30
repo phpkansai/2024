@@ -39,7 +39,21 @@ a:visited {
 	display: flex;
 	gap: 10px;
 }
-
+#archive_list{
+	display: flex;
+	margin: 30px;
+}
+.archive_circle{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #BEA6A0;
+  text-align:center;
+  line-height: 80px;
+}
+.archive_circle a{
+	color: #fff;
+}
 #footerInner .pagetop {
 	position: absolute;
 	top: -24px;
