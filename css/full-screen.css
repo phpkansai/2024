@@ -44,6 +44,9 @@ a:visited {
 	margin: 30px;
 	justify-content: center;
 }
+#archive_list li{
+	margin: 0 5px;
+}
 .archive_circle{
   width: 80px;
   height: 80px;
@@ -638,116 +641,121 @@ a:visited {
 
 
     
-    @media screen and (max-width: 767px){
-		.staff_list{
-			width:90%;
-			margin: 0 auto;
-		}
-			h1 img{
-		  width:85%;
-		}
-		.pc_display{
-		  display:none;
-		}
-		.sp_display{
-		  display:block;
-		}
-		.menu_cld{
-		  justify-content:center;
-		  border-radius: 0;
-		  width:300px;
-		}
-		.btn_dsn{
-		  width:50%;
-		  border-radius: 10px;
-		  padding:15px 30px;
-		}
-		.btn_txt{
-		  font-size:1.2em;
-		}
-		.block_list,
-		.rec_menu,
-		.what_box,
-		.what_in_box,
-		.entry_list,
-		.company_list{
-		 flex-direction:column;
-		 width:100%;
-		}
-		.rec_menu_back{
-		 width:98%;
-		 border-radius:15px;
-		}
-		.block_list,
-		.what_box,
-		.what_in_box{
-		  align-items:center;
-		}
-		.what_txt,
-		.what_img{
-		  width:100%;
-		}
-		.block_list li{
-		  margin-top:40px;
-		}
-		.what_in_txt{
-		  width:98%;
-		}
-		.block_list{
-		  margin-left:0;
-		}
-		.entry_back,
-		.baby_back{
-		  width:98%;
-		}
-		.ent_item{
-		  width:190px;
-		  height:3em;
-		  line-height:3em;
-		}
-		.ent_txt{
-		  width:90%;
-		}
-		.note_open_txt,
-		.deli_open_txt{
-		  text-align:center;
-		}
-		.company_txt{
-		  width:70%;
-		  margin:0 auto;
-		  height:2em;
-		  line-height:2em;
-		}
-		.special_company{
-		  width:86%;
-		}
-		.company_img{
-		  width:95%;
-		  margin-top:30px;
-		  margin-left:auto;
-		  margin-right:auto;
-		}
-		.company_bnr{
-		  justify-content:center;
-		}
-		.btn_photo{
-		  padding:30px 0;
-		  font-size:1.1em;
-		}
-		.btn_hajimete{
-		  padding:30px 0;
-		  font-size:1.1em;
-		}
-		.home_btn{
-		width:90%;
-		}
-		.yellow_box{
-		width:90%;
-		}
-		.about_conf{
-			width:90%;
-		}
+@media screen and (max-width: 767px){
+	.archive_circle{
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
 	}
+	.staff_list{
+		width:90%;
+		margin: 0 auto;
+	}
+	h1 img{
+		width:85%;
+	}
+	.pc_display{
+		display:none;
+	}
+	.sp_display{
+		display:block;
+	}
+	.menu_cld{
+		justify-content:center;
+		border-radius: 0;
+		width:300px;
+	}
+	.btn_dsn{
+		width:50%;
+		border-radius: 10px;
+		padding:15px 30px;
+	}
+	.btn_txt{
+		font-size:1.2em;
+	}
+	.block_list,
+	.rec_menu,
+	.what_box,
+	.what_in_box,
+	.entry_list,
+	.company_list{
+		flex-direction:column;
+		width:100%;
+	}
+	.rec_menu_back{
+		width:98%;
+		border-radius:15px;
+	}
+	.block_list,
+	.what_box,
+	.what_in_box{
+		align-items:center;
+	}
+	.what_txt,
+	.what_img{
+		width:100%;
+	}
+	.block_list li{
+		margin-top:40px;
+	}
+	.what_in_txt{
+		width:98%;
+	}
+	.block_list{
+		margin-left:0;
+	}
+	.entry_back,
+	.baby_back{
+		width:98%;
+	}
+	.ent_item{
+		width:190px;
+		height:3em;
+		line-height:3em;
+	}
+	.ent_txt{
+		width:90%;
+	}
+	.note_open_txt,
+	.deli_open_txt{
+		text-align:center;
+	}
+	.company_txt{
+		width:70%;
+		margin:0 auto;
+		height:2em;
+		line-height:2em;
+	}
+	.special_company{
+		width:86%;
+	}
+	.company_img{
+		width:95%;
+		margin-top:30px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.company_bnr{
+		justify-content:center;
+	}
+	.btn_photo{
+		padding:30px 0;
+		font-size:1.1em;
+	}
+	.btn_hajimete{
+		padding:30px 0;
+		font-size:1.1em;
+	}
+	.home_btn{
+	width:90%;
+	}
+	.yellow_box{
+	width:90%;
+	}
+	.about_conf{
+		width:90%;
+	}
+}
 		
 
 
