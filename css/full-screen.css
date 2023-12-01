@@ -450,7 +450,12 @@ a:visited {
 		 color:#F7534A;
 		 padding-top:40px;
 	   }
-	   
+	   .sponsor_class{
+		color: #333333;
+		text-align: center;
+		width: 60%;
+		margin: 0 auto;
+	   }
 	   .spon_list{
 		margin:50px auto;
 		display:flex;
