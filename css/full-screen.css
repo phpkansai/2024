@@ -453,8 +453,9 @@ a:visited {
 	   .sponsor_class{
 		color: #333333;
 		text-align: center;
-		width: 60%;
+		width: 30%;
 		margin: 0 auto;
+		border-radius: 50px;
 	   }
 	   .spon_list{
 		margin:50px auto;
@@ -619,6 +620,10 @@ a:visited {
 
     
 @media screen and (max-width: 767px){
+	.sponsor_class{
+		width: 63%;
+	}
+
 	.archive_circle{
 		width: 60px;
 		height: 60px;
