@@ -26,12 +26,12 @@
                 <div class="col-xs-11 col-md-11 text-center q-mx-lg">
                   <img
                       src="~/assets/memory-chan/memory-chan01.png"
-                      class="memory-chan01"
+                      class="memory-chan01 anime-fuwafuwa1"
                       alt="ちょうぜつエンジニア"
                   />
                   <img
                       src="~/assets/memory-chan/memory-chan02.png"
-                      class="memory-chan02"
+                      class="memory-chan02 anime-fuwafuwa2"
                       alt="ちょうぜつエンジニア"
                   />
                   <p class="text-h6">あなたにぴったりのトークは？</p>
@@ -151,6 +151,29 @@ export default defineComponent({
 
 .float-button {
   z-index: 10;
+}
+
+@keyframes fuwafuwa1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translate(2px, -10px);
+  }
+}
+.anime-fuwafuwa1 {
+  animation: 7s fuwafuwa1 infinite;
+}
+@keyframes fuwafuwa2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translate(-2px, 8px);
+  }
+}
+.anime-fuwafuwa2 {
+  animation: 7s fuwafuwa2 infinite;
 }
 
 </style>
