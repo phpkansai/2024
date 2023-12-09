@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex-center">
+  <q-page class="flex-center page">
 
     <div class="row justify-center">
       <div class="col-xs-11 text-center q-mt-lg">
@@ -52,20 +52,45 @@
       <div v-if="isShowButtons">
         <div class="row justify-center">
           <div class="col-xs-11 col-md-7 text-center">
-            <q-btn
-                color="primary"
+            <q-btn-dropdown
+                split
+                color="light-blue-13"
                 class="full-width"
-                stack
-                size="16px"
+                size="20px"
                 icon="𝕏"
                 label="結果を共有する"
                 :href="tweetHrefUrl"
                 target="_blank"
-            />
+            >
+
+              <q-list>
+                <q-item clickable v-close-popup @click="resultShareByLine">
+                  <q-item-section avatar>
+                    <q-avatar>
+                      <img src="~/assets/sns/line.png" alt="Line"/>
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>LINE</q-item-label>
+                  </q-item-section>
+                </q-item>
+
+                <q-item clickable v-close-popup @click="resultShareByCopy">
+                  <q-item-section avatar>
+                    <q-avatar icon="content_copy" color="blue-grey-2">
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>URLコピー</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+
+            </q-btn-dropdown>
           </div>
         </div>
 
-        <div class="row justify-center q-mt-lg">
+        <div class="row justify-center q-my-lg">
           <div class="col-xs-11 col-md-7 text-center">
             <q-btn
                 color="primary"
@@ -78,9 +103,69 @@
           </div>
         </div>
 
-        <div class="row justify-center q-my-lg">
-          <div class="col-xs-11 col-md-7 text-center">
-            <back-web-site-button />
+        <div class="row justify-center">
+          <div class="col-xs-11 col-md-7">
+            <q-card class="q-py-md php-con-card">
+              <q-item>
+                <q-item-section>
+                  <q-item-label class="text-center text-h6 text-weight-bold text-orange-10">
+                    PHPカンファレンス関西2024は<br/>2024年2月11日（日）開催!!
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-card-section horizontal class="justify-center">
+                <q-img
+                    class="col-5 q-ml-md q-px-md php-con-logo"
+                    src="../assets/php_con_logo2024.png"
+                    fit="contain"
+                />
+                <q-card-section class="q-py-xs q-px-xs">
+                  <q-list>
+                    <q-item
+                        clickable
+                        href="https://2024.kphpug.jp/"
+                        target="_blank"
+                        class="q-px-xs"
+                    >
+                      <q-item-section avatar>
+                        <q-icon color="red-11" name="home" />
+                      </q-item-section>
+                      <q-item-section>
+                        <q-item-label>公式サイト</q-item-label>
+                      </q-item-section>
+                    </q-item>
+
+                    <q-item
+                        clickable
+                        href="https://fortee.jp/phpcon-kansai2024/timetable"
+                        target="_blank"
+                        class="q-px-xs"
+                    >
+                      <q-item-section avatar>
+                        <q-icon color="red-11" name="date_range" />
+                      </q-item-section>
+                      <q-item-section>
+                        <q-item-label>タイムテーブル</q-item-label>
+                      </q-item-section>
+                    </q-item>
+
+                    <q-item
+                        clickable
+                        href="https://peatix.com/event/3752841/view?k=480d6bc1430a629adca5b030b2457224a3e4a4c6"
+                        target="_blank"
+                        class="q-px-xs"
+                    >
+                      <q-item-section avatar>
+                        <q-icon color="red-11" name="confirmation_number" />
+                      </q-item-section>
+                      <q-item-section>
+                        <q-item-label>チケット購入</q-item-label>
+                      </q-item-section>
+                    </q-item>
+                  </q-list>
+                </q-card-section>
+              </q-card-section>
+            </q-card>
           </div>
         </div>
       </div>
@@ -95,13 +180,12 @@
 import { defineComponent } from 'vue'
 import ProposalsData from "../../data/proposals.json"
 import ResultThumbnail from "../assets/resultThumbnail.png"
-import BackWebSiteButton from "../components/BackWebSiteButton.vue"
 import SnsButtons from "../components/SnsButtons.vue"
+import {Notify} from 'quasar'
 
 export default defineComponent({
   name: 'QuestionPage',
   components: {
-    BackWebSiteButton,
     SnsButtons,
   },
   data() {
@@ -110,6 +194,8 @@ export default defineComponent({
       isShowTalkCard: false,
       isShowButtons: false,
       resultThumbnailBackground: ResultThumbnail,
+      buttonLabelMessage: "",
+      hideLabel: true,
     }
   },
   mounted : function(){
@@ -124,19 +210,44 @@ export default defineComponent({
       return this.proposals.find((proposal) => proposal.uuid === suggestedTalkUuid)
     },
     tweetHrefUrl() {
-      const shareUrl = "https://2024.kphpug.jp/?uuid=" + this.suggestedTalk.uuid
+      const shareUrl = this.shareUrl()
       const postMessage = "私におすすめのトークはこれでした!! "
       const hashtags = "phpkansai,ぺちこん関西おすすめトーク診断"
       return "https://twitter.com/share?url=" + shareUrl + "&text=" + postMessage + "&hashtags=" + hashtags
     }
   },
   methods: {
+    shareUrl() {
+      return "https://2024.kphpug.jp/yntest/results/" + this.suggestedTalk.uuid + ".html"
+    },
+    resultShareByLine() {
+      const message = "【PHPカンファレンス関西2024おすすめトーク診断】\n私のおすすめのトークはこれでした!! \n"
+          + "**" + this.suggestedTalk.title + "**\n"
+      const url = "https://line.me/R/msg/text/?"
+          + encodeURIComponent(message + this.shareUrl())
+      window.open(url, "_blank")
+    },
+    resultShareByCopy() {
+      const message = "【PHPカンファレンス関西2024おすすめトーク診断】\n私のおすすめのトークはこれでした!! \n"
+          + "**" + this.suggestedTalk.title + "**\n"
+      navigator.clipboard.writeText(message + this.shareUrl())
+      console.log(Notify)
+      Notify.create('コピーしました!!')
+    },
   }
 })
 </script>
 <style scoped>
-.result-card {
-  max-width: 800px;
+.page {
+  padding-bottom: 80px;
+}
+
+.php-con-card {
+  background-color: #fffacd;
+}
+
+.php-con-logo {
+  max-width: 180px;
 }
 
 .result-card-background {
