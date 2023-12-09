@@ -1,5 +1,9 @@
 <template>
   <q-page class="">
+    <div
+      v-if="loading"
+      class="loadingCover"
+    />
     <div class="row justify-center">
       <div class="col-xs-11 text-center q-my-md q-mt-lg-md">
 
@@ -8,6 +12,7 @@
             <img
               alt="おすすめトーク診断"
               src="~assets/logo.png"
+              @load="hideLoad"
               style="width:100%; max-width: 300px; border-radius: 15px;"
             >
           </div>
@@ -18,10 +23,12 @@
                 <img
                     src="~/assets/memory-chan/memory-chan01.png"
                     class="memory-chan01"
+                    alt="ちょうぜつエンジニア"
                 />
                 <img
                     src="~/assets/memory-chan/memory-chan02.png"
                     class="memory-chan02"
+                    alt="ちょうぜつエンジニア"
                 />
                 <p class="text-h6">あなたにぴったりのトークは？</p>
                 <p>
@@ -68,17 +75,54 @@
 import { defineComponent } from 'vue'
 import BackWebSiteButton from "../components/BackWebSiteButton.vue"
 import SnsButtons from "../components/SnsButtons.vue"
+import {Loading, QSpinnerPuff} from 'quasar'
 
 export default defineComponent({
   name: 'IndexPage',
+  data() {
+    return {
+      loading: true,
+    }
+  },
+  mounted : function(){
+    Loading.show({
+      spinner: QSpinnerPuff,
+      message: 'ちょっとまってね...',
+      backgroundColor: 'deep-orange-2',
+      messageColor: 'brown-10',
+      spinnerColor: 'white',
+    })
+  },
+  watch: {
+    loading: function (val) {
+      if (!val) {
+        Loading.hide()
+      }
+    }
+  },
   components: {
     BackWebSiteButton,
     SnsButtons,
+  },
+  methods: {
+    hideLoad() {
+      setTimeout(() => {this.loading = false}, 1000)
+    },
   },
 })
 </script>
 
 <style scoped>
+.loadingCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #faefec;
+  z-index: 100;
+}
+
 .memory-chan-stage {
   position:relative;
   z-index: 10;
