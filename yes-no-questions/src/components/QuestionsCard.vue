@@ -31,6 +31,12 @@
         class="memory-chan"
         alt="ちょうぜつエンジニア"
     />
+    <img
+        v-show="selectMemoryChan === 5"
+        :src="memoryChan5"
+        class="memory-chan"
+        alt="ちょうぜつエンジニア"
+    />
   </q-card>
 </template>
 
@@ -40,6 +46,7 @@ import memoryChan1 from '../assets/memory-chan/memory-chan03-01.png'
 import memoryChan2 from '../assets/memory-chan/memory-chan03-02.png'
 import memoryChan3 from '../assets/memory-chan/memory-chan03-03.png'
 import memoryChan4 from '../assets/memory-chan/memory-chan03-04.png'
+import memoryChan5 from '../assets/memory-chan/memory-chan03-05.png'
 export default defineComponent({
   name: 'QuestionCard',
   props: {
@@ -55,11 +62,12 @@ export default defineComponent({
       memoryChan2: memoryChan2,
       memoryChan3: memoryChan3,
       memoryChan4: memoryChan4,
+      memoryChan5: memoryChan5,
     }
   },
   computed: {
     selectMemoryChan() {
-      const memoryChanCount = 4
+      const memoryChanCount = 5
       return Math.floor(Math.random() * memoryChanCount) + 1
     }
   },
