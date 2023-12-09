@@ -30,7 +30,7 @@
             <div class="memory-chan-stage">
               <img
                   src="~/assets/memory-chan/memory-chan04.png"
-                  class="memory-chan01"
+                  class="memory-chan04"
               />
             </div>
             <q-card-actions align="center">
@@ -175,12 +175,12 @@ export default defineComponent({
   z-index: 20;
 }
 
-.memory-chan01 {
+.memory-chan04 {
   position: absolute;
-  bottom: -25px;
-  right: 0;
+  bottom: 0px;
+  right: 10px;
   width: 25%;
-  opacity: 0.5;
+  opacity: 0.9;
   z-index: -1;
 }
 </style>

@@ -87,18 +87,16 @@ export default defineComponent({
   position: absolute;
   top: 10%;
   right: -6%;
-  width: 100px;
-  height: 100px;
-  opacity: 0.3;
+  width: 80px;
+  opacity: 0.4;
   z-index: -1;
 }
 .memory-chan02 {
   position: absolute;
-  top: 45%;
-  left: -15%;
-  width: 100px;
-  height: 100px;
-  opacity: 0.3;
+  top: 35%;
+  left: -9%;
+  width: 80px;
+  opacity: 0.4;
   z-index: -1;
 }
 

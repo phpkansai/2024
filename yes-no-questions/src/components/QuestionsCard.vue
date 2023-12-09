@@ -6,15 +6,18 @@
       <div class="text-h6">{{ question }}</div>
     </q-card-section>
     <img
-        src="~/assets/memory-chan/memory-chan03.png"
-        class="memory-chan01"
+        :src="memoryChanRandom"
+        class="memory-chan"
     />
   </q-card>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-
+import memoryChan1 from '../assets/memory-chan/memory-chan03-01.png'
+import memoryChan2 from '../assets/memory-chan/memory-chan03-02.png'
+import memoryChan3 from '../assets/memory-chan/memory-chan03-03.png'
+import memoryChan4 from '../assets/memory-chan/memory-chan03-04.png'
 export default defineComponent({
   name: 'QuestionCard',
   props: {
@@ -25,9 +28,20 @@ export default defineComponent({
     },
   },
   data() {
-    return {}
+    return {
+      memoryChan1: memoryChan1,
+      memoryChan2: memoryChan2,
+      memoryChan3: memoryChan3,
+      memoryChan4: memoryChan4,
+    }
   },
-  computed: {},
+  computed: {
+    memoryChanRandom() {
+      const memoryChanCount = 4
+      const random = Math.floor(Math.random() * memoryChanCount) + 1
+      return this[`memoryChan${random}`]
+    }
+  },
   methods: {}
 })
 </script>
@@ -41,13 +55,12 @@ export default defineComponent({
   z-index: 20;
 }
 
-.memory-chan01 {
+.memory-chan {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  opacity: 0.3;
+  bottom: 5px;
+  right: 15px;
+  width: 80px;
+  opacity: 0.8;
   z-index: 1;
 }
 </style>
