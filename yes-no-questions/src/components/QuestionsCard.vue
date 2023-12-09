@@ -5,9 +5,31 @@
     >
       <div class="text-h6">{{ question }}</div>
     </q-card-section>
+
+    <!-- v-showにすることでカード切り替え時の描画をスムーズにする -->
     <img
-        :src="memoryChanRandom"
+        v-show="selectMemoryChan === 1"
+        :src="memoryChan1"
         class="memory-chan"
+        alt="ちょうぜつエンジニア"
+    />
+    <img
+        v-show="selectMemoryChan === 2"
+        :src="memoryChan2"
+        class="memory-chan"
+        alt="ちょうぜつエンジニア"
+    />
+    <img
+        v-show="selectMemoryChan === 3"
+        :src="memoryChan3"
+        class="memory-chan"
+        alt="ちょうぜつエンジニア"
+    />
+    <img
+        v-show="selectMemoryChan === 4"
+        :src="memoryChan4"
+        class="memory-chan"
+        alt="ちょうぜつエンジニア"
     />
   </q-card>
 </template>
@@ -36,10 +58,9 @@ export default defineComponent({
     }
   },
   computed: {
-    memoryChanRandom() {
+    selectMemoryChan() {
       const memoryChanCount = 4
-      const random = Math.floor(Math.random() * memoryChanCount) + 1
-      return this[`memoryChan${random}`]
+      return Math.floor(Math.random() * memoryChanCount) + 1
     }
   },
   methods: {}
