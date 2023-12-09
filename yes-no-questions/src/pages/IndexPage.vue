@@ -4,6 +4,19 @@
       v-if="loading"
       class="loadingCover"
     />
+    <div
+        v-if="loadingQuestion"
+        class="loadingCover"
+    >
+      <div class="absolute-center">
+        <img
+            src="~/assets/memory-chan/memory-chan01.png"
+            class="zoom-memory-chan zoom-in"
+            alt="START!!"
+        >
+      </div>
+    </div>
+
     <div class="row justify-center">
       <div class="col-xs-11 text-center q-my-md q-mt-lg-md">
 
@@ -48,7 +61,7 @@
               <div class="row justify-center">
                 <div class="col-11 q-mx-md">
                   <q-btn
-                    :to="{name: 'QuestionsPage'}"
+                    @click="goToQuestionsPage"
                     push
                     class="full-width"
                     color="white"
@@ -87,14 +100,14 @@ export default defineComponent({
   data() {
     return {
       loading: true,
+      loadingQuestion: false,
     }
   },
   mounted : function(){
     Loading.show({
       spinner: QSpinnerPuff,
-      message: 'ちょっとまってね...',
       backgroundColor: 'deep-orange-2',
-      messageColor: 'brown-10',
+      messageColor: 'brown-8',
       spinnerColor: 'white',
     })
   },
@@ -112,6 +125,13 @@ export default defineComponent({
   methods: {
     hideLoad() {
       this.loading = false
+    },
+    goToQuestionsPage() {
+      this.loadingQuestion = true
+      setTimeout(() => {
+        this.$router.push({name: 'QuestionsPage'})
+      }, 2500)
+
     },
   },
 })
@@ -178,6 +198,40 @@ export default defineComponent({
 }
 .anime-fuwafuwa2 {
   animation: 7s fuwafuwa2 infinite;
+}
+
+.zoom-memory-chan {
+
+}
+
+@keyframes zoom-in-anime1{
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  80% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0.0;
+  }
+}
+
+
+.zoom-in{
+  width: 200px;
+  animation:
+      zoom-in-anime1 1.8s linear forwards alternate;
 }
 
 </style>
