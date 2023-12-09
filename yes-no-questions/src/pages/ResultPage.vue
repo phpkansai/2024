@@ -221,15 +221,15 @@ export default defineComponent({
       return "https://2024.kphpug.jp/yntest/results/" + this.suggestedTalk.uuid + ".html"
     },
     resultShareByLine() {
-      const message = "【PHPカンファレンス関西2024おすすめトーク診断】\n私のおすすめのトークはこれでした!! \n"
-          + "**" + this.suggestedTalk.title + "**\n"
+      const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
+          + this.suggestedTalk.title + "\nby " + this.suggestedTalk.speaker.name + "さん\n"
       const url = "https://line.me/R/msg/text/?"
           + encodeURIComponent(message + this.shareUrl())
       window.open(url, "_blank")
     },
     resultShareByCopy() {
-      const message = "【PHPカンファレンス関西2024おすすめトーク診断】\n私のおすすめのトークはこれでした!! \n"
-          + "**" + this.suggestedTalk.title + "**\n"
+      const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
+          + "**" + this.suggestedTalk.title + "**\nby " + this.suggestedTalk.speaker.name + "さん\n"
       navigator.clipboard.writeText(message + this.shareUrl())
       console.log(Notify)
       Notify.create('コピーしました!!')
