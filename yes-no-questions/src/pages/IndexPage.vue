@@ -1,5 +1,5 @@
 <template>
-  <q-page class="">
+  <q-page class="page">
     <div
       v-if="loading"
       class="loadingCover"
@@ -118,6 +118,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.page {
+  overflow-x: hidden;
+}
+
 .loadingCover {
   position: fixed;
   top: 0;
