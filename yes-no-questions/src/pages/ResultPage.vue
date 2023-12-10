@@ -115,11 +115,11 @@
               </q-item>
               <q-card-section horizontal class="justify-center">
                 <q-img
-                    class="col-5 q-ml-md q-px-md php-con-logo"
+                    class="col-5 php-con-logo"
                     src="../assets/php_con_logo2024.png"
                     fit="contain"
                 />
-                <q-card-section class="q-py-xs q-px-xs">
+                <q-card-section class="q-py-xs q-pr-xs">
                   <q-list>
                     <q-item
                         clickable
