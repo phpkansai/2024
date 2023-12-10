@@ -33,8 +33,9 @@
             </q-intersection>
           </div>
 
-          <q-intersection transition="fade">
-            <div class="col-xs-11 col-md-5 memory-chan-stage">
+
+          <div class="col-xs-11 col-md-5 memory-chan-stage">
+            <q-intersection transition="fade">
               <div class="row justify-center">
                 <div class="col-xs-11 col-md-11 text-center q-mx-lg">
                   <img
@@ -58,6 +59,8 @@
                   </p>
                 </div>
               </div>
+            </q-intersection>
+            <q-intersection transition="fade">
               <div class="row justify-center">
                 <div class="col-11 q-mx-md">
                   <q-btn
@@ -76,8 +79,8 @@
                   <back-web-site-button />
                 </div>
               </div>
-            </div>
-          </q-intersection>
+            </q-intersection>
+          </div>
 
         </div>
 
