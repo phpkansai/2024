@@ -212,7 +212,7 @@ export default defineComponent({
     tweetHrefUrl() {
       const shareUrl = this.shareUrl()
       const postMessage = "私におすすめのトークはこれでした!! "
-      const hashtags = "phpkansai,ぺちこん関西おすすめトーク診断"
+      const hashtags = "phpkansai,トーク診断"
       return "https://twitter.com/share?url=" + shareUrl + "&text=" + postMessage + "&hashtags=" + hashtags
     }
   },

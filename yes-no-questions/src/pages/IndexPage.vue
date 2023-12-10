@@ -18,11 +18,11 @@
     </div>
 
     <div class="row justify-center">
-      <div class="col-xs-11 text-center q-my-md q-mt-lg-md">
+      <div class="col-xs-11 text-center q-my-md q-my-lg">
 
         <div class="row justify-center">
           <div class="col-xs-11 col-md-5 text-center q-my-md">
-            <q-intersection transition="scale">
+            <q-intersection transition="scale" once>
               <img
                 v-show="!loading"
                 alt="おすすめトーク診断"
@@ -35,56 +35,115 @@
 
 
           <div class="col-xs-11 col-md-5 memory-chan-stage">
-            <q-intersection transition="fade">
-              <div class="row justify-center">
-                <div class="col-xs-11 col-md-11 text-center q-mx-lg">
-                  <img
-                      src="~/assets/memory-chan/memory-chan01.png"
-                      class="memory-chan01 anime-fuwafuwa1"
-                      alt="ちょうぜつエンジニア"
-                  />
-                  <img
-                      src="~/assets/memory-chan/memory-chan02.png"
-                      class="memory-chan02 anime-fuwafuwa2"
-                      alt="ちょうぜつエンジニア"
-                  />
-                  <p class="text-h6">あなたにぴったりのトークは？</p>
-                  <p>
-                    2/11（日）にどのトークを聞けばいいか迷っていませんか？
-                    簡単な質問に答えるだけで、あなたにぴったりのトークを診断します。
-                    聞くべきトークを見つけて、PHPカンファレンス関西2024を楽しみましょう！
-                  </p>
-                  <p class="text-caption text-grey-7">
-                    本診断はPHPカンファレンス関西2024実行委員会が作成したものです。実際の発表内容と異なる場合があります。
-                  </p>
-                </div>
+            <div class="row justify-center">
+              <div class="col-xs-11 col-md-11 text-center q-mx-lg">
+                <img
+                    src="~/assets/memory-chan/memory-chan01.png"
+                    class="memory-chan01 anime-fuwafuwa1"
+                    alt="ちょうぜつエンジニア"
+                />
+                <img
+                    src="~/assets/memory-chan/memory-chan02.png"
+                    class="memory-chan02 anime-fuwafuwa2"
+                    alt="ちょうぜつエンジニア"
+                />
+                <p class="text-h6">あなたにぴったりのトークは？</p>
+                <p>
+                  2/11（日）にどのトークを聞けばいいか迷っていませんか？
+                  簡単な質問に答えるだけで、あなたにぴったりのトークを診断します。
+                  聞くべきトークを見つけて、PHPカンファレンス関西2024を楽しみましょう！
+                </p>
+                <p class="text-caption text-grey-7">
+                  本診断はPHPカンファレンス関西2024実行委員会が作成したものです。実際の発表内容と異なる場合があります。
+                </p>
               </div>
-            </q-intersection>
-            <q-intersection transition="fade">
-              <div class="row justify-center">
-                <div class="col-11 q-mx-md">
-                  <q-btn
-                    @click="goToQuestionsPage"
-                    push
-                    class="full-width"
-                    color="white"
-                    size="22px"
-                    text-color="primary"
-                    label="診断開始"
-                  />
-                </div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-11 q-mx-md">
+                <q-btn
+                  @click="goToQuestionsPage"
+                  push
+                  class="full-width"
+                  color="white"
+                  size="22px"
+                  text-color="primary"
+                  label="診断開始"
+                />
               </div>
-              <div class="row justify-center">
-                <div class="col-11 q-mt-lg q-mx-md">
-                  <back-web-site-button />
-                </div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-11 q-mt-lg q-mx-md">
+                <back-web-site-button />
               </div>
-            </q-intersection>
+            </div>
           </div>
 
         </div>
 
       </div>
+
+      <div class="col-10 text-center q-mb-xs q-mx-md q-mt-lg">
+        <p class="">
+          <span class="section-title text-h6 text-weight-bold text-orange-8">
+            使い方
+          </span>
+        </p>
+      </div>
+      <q-card class="bg-orange-3 text-white col-xs-11 col-md-3 text-center q-my-md q-mx-md">
+        <q-card-section>
+          <q-icon name="looks_one" size="50px" color="orange-10" />
+          <div class="text-h5 text-orange-10">トーク診断を受ける</div>
+        </q-card-section>
+        <q-card-section class="q-pt-none">
+          まずは自分が診断を受けて、当日聞くべきトークを見つけましょう！
+        </q-card-section>
+      </q-card>
+      <q-card class="bg-orange-3 text-white col-xs-11 col-md-3 text-center q-my-md q-mx-md">
+        <q-card-section>
+          <q-icon name="looks_two" size="50px" color="orange-10" />
+          <div class="text-h5 text-orange-10">結果をXにポスト</div>
+        </q-card-section>
+        <q-card-section class="q-pt-none">
+          みんなで結果を見て盛り上がりましょう!!<br>
+          <span class="text-weight-bold q-py-xs">
+            ハッシュタグ：
+          </span>
+          <a
+              class="text-weight-bold q-py-xs text-light-blue-14 no-border"
+              href="https://twitter.com/search?q=%23%E3%83%88%E3%83%BC%E3%82%AF%E8%A8%BA%E6%96%AD"
+              target="_blank"
+          >
+            #トーク診断
+          </a>
+        </q-card-section>
+      </q-card>
+      <q-card class="bg-orange-3 text-white col-xs-11 col-md-3 text-center q-my-md q-mx-md">
+        <q-card-section>
+          <q-icon name="looks_3" size="50px" color="orange-10" />
+          <div class="text-h5 text-orange-10">周りに診断を勧める</div>
+        </q-card-section>
+        <q-card-section class="q-pt-none">
+          初参加の人がどのトークを聞くべきか迷わないよう、診断を紹介しましょう！
+        </q-card-section>
+      </q-card>
+
+      <div class="col-10 text-center q-mb-xs q-mx-md q-mt-lg">
+        <p class="">
+          <span class="section-title text-h6 text-weight-bold text-orange-8">
+            めもりーちゃんについて
+          </span>
+        </p>
+      </div>
+
+      <q-card class="bg-orange-1 text-grey-10 col-xs-11 col-md-6 text-center q-my-md q-mx-md">
+        <q-card-section>
+          <div class="text-h5 text-orange-10">ちょうぜつエンジニアめもりーちゃん</div>
+        </q-card-section>
+        <q-card-section class="q-pt-none">
+          何か紹介を載せるとか
+        </q-card-section>
+      </q-card>
+
     </div>
 
     <SnsButtons class="float-button"/>
@@ -143,6 +202,7 @@ export default defineComponent({
 <style scoped>
 .page {
   overflow-x: hidden;
+  padding-bottom: 80px;
 }
 
 .loadingCover {
@@ -178,6 +238,12 @@ export default defineComponent({
 
 .float-button {
   z-index: 10;
+}
+
+.section-title {
+  padding: 5px 20px 5px 20px;
+  border-top: 3px dashed #ff955f;
+  border-bottom: 3px dashed #ff955f;
 }
 
 @keyframes fuwafuwa1 {
@@ -229,7 +295,6 @@ export default defineComponent({
     opacity: 0.0;
   }
 }
-
 
 .zoom-in{
   width: 200px;
