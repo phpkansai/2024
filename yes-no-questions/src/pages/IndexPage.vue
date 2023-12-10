@@ -109,7 +109,7 @@
             ハッシュタグ：
           </span>
           <a
-              class="text-weight-bold q-py-xs text-light-blue-14 no-border"
+              class="text-weight-bold q-py-xs text-light-blue-14 text-decoration-none"
               href="https://twitter.com/search?q=%23%E3%83%88%E3%83%BC%E3%82%AF%E8%A8%BA%E6%96%AD"
               target="_blank"
           >
@@ -135,12 +135,22 @@
         </p>
       </div>
 
-      <q-card class="bg-orange-1 text-grey-10 col-xs-11 col-md-6 text-center q-my-md q-mx-md">
+      <q-card class="bg-orange-1 text-grey-10 col-xs-11 col-md-6 text-center q-mb-md q-mx-md q-py-md">
         <q-card-section>
-          <div class="text-h5 text-orange-10">ちょうぜつエンジニアめもりーちゃん</div>
+          <div class="text-h6 text-orange-10">ちょうぜつエンジニア<br>めもりーちゃん とは</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
-          何か紹介を載せるとか
+          田中ひさてる氏（
+          <a
+              class="text-light-blue-14 text-decoration-none"
+              href="https://twitter.com/tanakahisateru"
+              target="_blank"
+          >
+            @tanakahisateru
+          </a>
+          ）がX（旧Twitter）で連載しているITエンジニア向けWeb漫画。
+          2020年にはSoftware Design誌で連載もされている。
+          関連書籍に同氏の「ちょうぜつソフトウェア設計入門」（技術評論社）がある。
         </q-card-section>
       </q-card>
 
@@ -244,6 +254,10 @@ export default defineComponent({
   padding: 5px 20px 5px 20px;
   border-top: 3px dashed #ff955f;
   border-bottom: 3px dashed #ff955f;
+}
+
+.text-decoration-none {
+  text-decoration-line: none;
 }
 
 @keyframes fuwafuwa1 {
