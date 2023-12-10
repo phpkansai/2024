@@ -18,25 +18,25 @@
     </div>
 
     <div class="row justify-center">
-      <div class="col-xs-11 text-center q-my-md q-my-lg">
+      <div class="col-xs-11 text-center q-my-lg">
 
         <div class="row justify-center">
-          <div class="col-xs-11 col-md-5 text-center q-my-md">
+          <div class="col-xs-12 col-md-5 text-center q-my-md">
             <q-intersection transition="scale" once>
               <img
                 v-show="!loading"
                 alt="おすすめトーク診断"
                 src="~assets/logo.png"
                 @load="hideLoad"
-                style="width:100%; max-width: 300px; border-radius: 15px;"
+                style="width:100%; max-width: 320px; border-radius: 15px;"
               >
             </q-intersection>
           </div>
 
 
-          <div class="col-xs-11 col-md-5 memory-chan-stage">
+          <div class="col-xs-12 col-md-5 q-my-md memory-chan-stage">
             <div class="row justify-center">
-              <div class="col-xs-11 col-md-11 text-center q-mx-lg">
+              <div class="col-xs-12 col-md-12 text-center">
                 <img
                     src="~/assets/memory-chan/memory-chan01.png"
                     class="memory-chan01 anime-fuwafuwa1"
@@ -47,19 +47,20 @@
                     class="memory-chan02 anime-fuwafuwa2"
                     alt="ちょうぜつエンジニア"
                 />
-                <p class="text-h6">あなたにぴったりのトークは？</p>
-                <p>
-                  2/11（日）にどのトークを聞けばいいか迷っていませんか？
-                  簡単な質問に答えるだけで、あなたにぴったりのトークを診断します。
-                  聞くべきトークを見つけて、PHPカンファレンス関西2024を楽しみましょう！
+                <p class="">
+                  <span class="section-title text-h6 text-weight-bold text-orange-8">
+                    あなたにぴったりのトークは？
+                  </span>
                 </p>
-                <p class="text-caption text-grey-7">
-                  本診断はPHPカンファレンス関西2024実行委員会が作成したものです。実際の発表内容と異なる場合があります。
+                <p>
+                  PHPカンファレンス関西2024の当日にどのトークを聞けばいいか迷っていませんか？
+                  簡単な質問に答えるだけで、あなたにぴったりのトークをめもりーちゃんが診断します。
+                  聞くべきトークを見つけて、PHPカンファレンス関西2024を楽しみましょう！
                 </p>
               </div>
             </div>
             <div class="row justify-center">
-              <div class="col-11 q-mx-md">
+              <div class="col-11 q-mx-md q-my-md">
                 <q-btn
                   @click="goToQuestionsPage"
                   push
@@ -72,7 +73,14 @@
               </div>
             </div>
             <div class="row justify-center">
-              <div class="col-11 q-mt-lg q-mx-md">
+              <div class="col-xs-12 col-md-12 text-center q-mx-lg q-mt-lg">
+                <p class="text-caption text-grey-7">
+                  本診断はPHPカンファレンス関西2024実行委員会がトークのプロポーザルを元に作成したものです。実際の発表内容と異なる場合がありますので、あらかじめご了承ください。
+                </p>
+              </div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-11 q-mt-sm q-mx-md">
                 <back-web-site-button />
               </div>
             </div>
@@ -89,7 +97,7 @@
           </span>
         </p>
       </div>
-      <q-card class="bg-orange-3 text-white col-xs-11 col-md-3 text-center q-my-md q-mx-md">
+      <q-card class="bg-orange-3 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
         <q-card-section>
           <q-icon name="looks_one" size="50px" color="orange-10" />
           <div class="text-h5 text-orange-10">トーク診断を受ける</div>
@@ -98,7 +106,7 @@
           まずは自分が診断を受けて、当日聞くべきトークを見つけましょう！
         </q-card-section>
       </q-card>
-      <q-card class="bg-orange-3 text-white col-xs-11 col-md-3 text-center q-my-md q-mx-md">
+      <q-card class="bg-orange-3 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
         <q-card-section>
           <q-icon name="looks_two" size="50px" color="orange-10" />
           <div class="text-h5 text-orange-10">結果をXにポスト</div>
@@ -117,13 +125,13 @@
           </a>
         </q-card-section>
       </q-card>
-      <q-card class="bg-orange-3 text-white col-xs-11 col-md-3 text-center q-my-md q-mx-md">
+      <q-card class="bg-orange-3 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
         <q-card-section>
           <q-icon name="looks_3" size="50px" color="orange-10" />
           <div class="text-h5 text-orange-10">周りに診断を勧める</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
-          初参加の人がどのトークを聞くべきか迷わないよう、診断を紹介しましょう！
+          カンファレンスに慣れていない人が迷わないよう、診断を紹介しましょう！
         </q-card-section>
       </q-card>
 
@@ -150,7 +158,7 @@
           </a>
           ）がX（旧Twitter）で連載しているITエンジニア向けWeb漫画。
           2020年にはSoftware Design誌で連載もされている。
-          関連書籍に同氏の「ちょうぜつソフトウェア設計入門」（技術評論社）がある。
+          関連書籍に同氏の「ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用」（技術評論社）がある。
         </q-card-section>
       </q-card>
 

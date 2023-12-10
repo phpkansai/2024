@@ -7,7 +7,7 @@
       label=""
       href="/"
   >
-    PHPカンファレンス関西2024<br />特設サイト
+    PHPカンファレンス関西2024<br />公式サイト
   </q-btn>
 </template>
 
