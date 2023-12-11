@@ -1,26 +1,210 @@
 [
     {
         "id": 1,
-        "question": "技術カンファレンスに来るのは初めて?",
+        "question": "初心者向けセッションが聞きたい?",
         "yes": 2,
-        "no": 3,
+        "no": 13,
         "resultTalkUuidWhenYes": "",
         "resultTalkUuidWhenNo": ""
     },
     {
         "id": 2,
-        "question": "PHP初心者?",
-        "yes": 1,
-        "no": null,
+        "question": "アプリの品質向上に興味はありますか？",
+        "yes": 3,
+        "no": 9,
         "resultTalkUuidWhenYes": "",
-        "resultTalkUuidWhenNo": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021"
+        "resultTalkUuidWhenNo": ""
     },
     {
         "id": 3,
-        "question": "PHPのバージョンアップで困っている?",
+        "question": "自分のコードは綺麗だと思う？?",
+        "yes": 4,
+        "no": 5,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 4,
+        "question": "テストコードは必ず書いている",
         "yes": null,
         "no": null,
+        "resultTalkUuidWhenYes": "8daa1c68-69b1-458a-9f3a-0c9a86e7843e",
+        "resultTalkUuidWhenNo": "a07d306b-f997-409f-8478-08fdb1c26b6f"
+    },
+    {
+        "id": 5,
+        "question": "自分のコードがどうしてもif文が多くなってしまう",
+        "yes": 6,
+        "no": 7,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 6,
+        "question": "nullsafe演算子を使いこなせている？",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "d2406310-e9dc-4866-851c-20662ae04fa8",
+        "resultTalkUuidWhenNo": "90e8390b-3054-430c-8535-4601f251408d"
+    },
+    {
+        "id": 7,
+        "question": "コードレビューでレビュワーとコミュニケーションが取れている",
+        "yes": 8,
+        "no": null,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": "1ece99f8-82c3-4a87-a684-6649350fdf74"
+    },
+    {
+        "id": 8,
+        "question": "Interfaceの使い方がよくわからない",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "a71a2778-826d-480c-bb0f-153df97f3448",
+        "resultTalkUuidWhenNo": "a60c9e18-bc61-4f60-80d0-0a0ea7a205c4"
+    },
+    {
+        "id": 9,
+        "question": "PHPの基礎が知りたい",
+        "yes": 10,
+        "no": 11,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 10,
+        "question": "autolodってよく聞くけど、何かはよくわからない",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "06582204-df2a-4af5-b301-4d394e064b0f",
+        "resultTalkUuidWhenNo": "de8a6738-b97c-466c-a1af-e09267250cc9"
+    },
+    {
+        "id": 11,
+        "question": "なにかOSSに貢献したい",
+        "yes": null,
+        "no": 12,
+        "resultTalkUuidWhenYes": "65343fcd-ae18-4378-a32a-6577e546be52",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 12,
+        "question": "アプリケーションはデプロイしてからが本番だと思う",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "42712995-5f3e-4c68-a951-39584eac95a1",
+        "resultTalkUuidWhenNo": "8c1e1f21-2b1d-4c66-ad4b-f90577a424e5"
+    },
+    {
+        "id": 13,
+        "question": "もっと綺麗にコードを書きたい",
+        "yes": 14,
+        "no": 18,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 14,
+        "question": "ソフトウェア設計を学びたい",
+        "yes": 15,
+        "no": 16,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 15,
+        "question": "クリーンアーキテクチャは完全に理解した",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "b3f6ed97-8551-40da-90b1-3a14697df303",
+        "resultTalkUuidWhenNo": "0d9231ed-2f64-4908-bd16-863922f56c0f"
+    },
+    {
+        "id": 16,
+        "question": "文法からしっかり抑えたい",
+        "yes": null,
+        "no": 17,
         "resultTalkUuidWhenYes": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021",
-        "resultTalkUuidWhenNo": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021"
-    }
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 17,
+        "question": "メモリ不足エラーが出るとツライ",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "6e9e5c05-ae72-4712-8f92-70f86a3336df",
+        "resultTalkUuidWhenNo": "10c6f1ac-ec4b-4895-8db7-39b9a13c84bb"
+    },
+    {
+        "id": 18,
+        "question": "体験談ややってみた系の話を聞きたい",
+        "yes": 19,
+        "no": 23,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 19,
+        "question": "時代はAIだと思う",
+        "yes": null,
+        "no": 20,
+        "resultTalkUuidWhenYes": "012b22df-47d8-4552-9cbe-58362130291c",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 20,
+        "question": "コミュニティに参加してみたいなって思う",
+        "yes": null,
+        "no": 21,
+        "resultTalkUuidWhenYes": "c903c4be-77bb-47b9-85a1-5bfdfd61c1aa",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 21,
+        "question": "PHP8.2にはまだ上げていない",
+        "yes": null,
+        "no": 22,
+        "resultTalkUuidWhenYes": "e2432bdb-6320-4034-a51a-b6cadcf67177",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 22,
+        "question": "技術広報って何をしてるのか気になる",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "30494f3c-b928-43b8-a617-f8c4a6992e08",
+        "resultTalkUuidWhenNo": "db13195a-0368-4df7-8ca9-cdb6d17ad8f3"
+    },
+    {
+        "id": 23,
+        "question": "PHPの歴史に触れてみたい",
+        "yes": null,
+        "no": 24,
+        "resultTalkUuidWhenYes": "5c4f8114-bf4a-45b2-b0a3-ed9697ab6040",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 24,
+        "question": "障害が出るのはいやだ",
+        "yes": 25,
+        "no": 26,
+        "resultTalkUuidWhenYes": "",
+        "resultTalkUuidWhenNo": ""
+    },
+    {
+        "id": 25,
+        "question": "特にDBでツラい目はみたくない",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "4e03491c-2a97-40aa-8ff9-a68593b0e847",
+        "resultTalkUuidWhenNo": "c70954c0-416c-4113-ab7d-067555538da2"
+    },
+    {
+        "id": 26,
+        "question": "PHPと他の言語の違いが気になる",
+        "yes": null,
+        "no": null,
+        "resultTalkUuidWhenYes": "0e0befdb-2028-42c8-98e2-b19e434f5a82",
+        "resultTalkUuidWhenNo": "bf2fe2a3-cd7d-4eaa-b7e5-0f63355423b6"
+    },
 ]
