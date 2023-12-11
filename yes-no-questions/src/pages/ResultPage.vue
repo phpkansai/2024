@@ -18,7 +18,7 @@
             <q-img :src="resultThumbnailBackground" >
               <div class="absolute-full text-center flex flex-center result-card-background">
                 <div>
-                  <div class="text-h5 text-weight-bolder q-pt-lg text-grey-9">
+                  <div class="text-h6 text-weight-bolder q-pt-lg text-grey-9">
                     {{ suggestedTalk.title }}
                   </div>
                   <div class="text-subtitle1 q-pa-sm text-grey-8">

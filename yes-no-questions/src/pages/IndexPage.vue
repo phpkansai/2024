@@ -17,8 +17,8 @@
       </div>
     </div>
 
-    <div class="row justify-center">
-      <div class="col-xs-11 text-center q-my-lg">
+    <div class="row justify-center q-pt-lg">
+      <div class="col-xs-11 text-center q-my-lg max-width-1200">
 
         <div class="row justify-center">
           <div class="col-xs-12 col-md-5 text-center q-my-md">
@@ -65,9 +65,9 @@
                   @click="goToQuestionsPage"
                   push
                   class="full-width"
-                  color="white"
-                  size="22px"
-                  text-color="primary"
+                  color="orange-3"
+                  size="24px"
+                  text-color="orange-10"
                   label="診断開始"
                 />
               </div>
@@ -97,18 +97,18 @@
           </span>
         </p>
       </div>
-      <q-card class="bg-orange-3 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
+      <q-card class="bg-orange-2 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
         <q-card-section>
-          <q-icon name="looks_one" size="50px" color="orange-10" />
+          <q-icon name="looks_one" size="50px" color="orange-8" />
           <div class="text-h5 text-orange-10">トーク診断を受ける</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
           まずは自分が診断を受けて、当日聞くべきトークを見つけましょう！
         </q-card-section>
       </q-card>
-      <q-card class="bg-orange-3 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
+      <q-card class="bg-orange-2 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
         <q-card-section>
-          <q-icon name="looks_two" size="50px" color="orange-10" />
+          <q-icon name="looks_two" size="50px" color="orange-8" />
           <div class="text-h5 text-orange-10">結果をXにポスト</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
@@ -125,9 +125,9 @@
           </a>
         </q-card-section>
       </q-card>
-      <q-card class="bg-orange-3 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
+      <q-card class="bg-orange-2 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
         <q-card-section>
-          <q-icon name="looks_3" size="50px" color="orange-10" />
+          <q-icon name="looks_3" size="50px" color="orange-8" />
           <div class="text-h5 text-orange-10">周りに診断を勧める</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
@@ -143,11 +143,9 @@
         </p>
       </div>
 
-      <q-card class="bg-orange-1 text-grey-10 col-xs-11 col-md-6 text-center q-mb-md q-mx-md q-py-md">
-        <q-card-section>
-          <div class="text-h6 text-orange-10">ちょうぜつエンジニア<br>めもりーちゃん とは</div>
-        </q-card-section>
-        <q-card-section class="q-pt-none">
+      <div class="text-grey-9 col-xs-11 col-md-4 text-center q-mb-md q-mx-md">
+        <div class="text-subtitle1 text-orange-10 q-my-sm">ちょうぜつエンジニアめもりーちゃん</div>
+        <div>
           田中ひさてる氏（
           <a
               class="text-light-blue-14 text-decoration-none"
@@ -159,8 +157,8 @@
           ）がX（旧Twitter）で連載しているITエンジニア向けWeb漫画。
           2020年にはSoftware Design誌で連載もされている。
           関連書籍に同氏の「ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用」（技術評論社）がある。
-        </q-card-section>
-      </q-card>
+        </div>
+      </div>
 
     </div>
 
@@ -221,6 +219,10 @@ export default defineComponent({
 .page {
   overflow-x: hidden;
   padding-bottom: 80px;
+}
+
+.max-width-1200 {
+  max-width: 1200px;
 }
 
 .loadingCover {
