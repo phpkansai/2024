@@ -18,7 +18,7 @@
             <q-img :src="resultThumbnailBackground" >
               <div class="absolute-full text-center flex flex-center result-card-background">
                 <div>
-                  <div class="text-h6 text-weight-bolder q-pt-lg text-grey-9">
+                  <div class="text-h6 q-pt-sm text-weight-bolder text-grey-9 text-overflow-lines">
                     {{ suggestedTalk.title }}
                   </div>
                   <div class="text-subtitle1 q-pa-sm text-grey-8">
@@ -253,6 +253,13 @@ export default defineComponent({
   background:rgba(255,255,255,0.3);
 }
 
+.text-overflow-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 .slide-top-text-effect-enter-active {
   transition: all 0.5s ease-out;
 }
@@ -288,8 +295,8 @@ export default defineComponent({
 .memory-chan04 {
   position: absolute;
   bottom: 0px;
-  right: 10px;
-  width: 25%;
+  right: 5px;
+  width: 23%;
   opacity: 1.0;
   z-index: -1;
 }
