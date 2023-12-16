@@ -36,7 +36,7 @@ export default defineComponent({
       shareButton: false,
       lineIcon: LineIcon,
       shareUrl: "https://2024.kphpug.jp/yntest",
-      twitterHashtags: "phpkansai,ぺちこん関西おすすめトーク診断",
+      twitterHashtags: "phpkansai,トーク診断",
       hideLabel: true,
       buttonLabelMessage: "",
     }
@@ -51,7 +51,7 @@ export default defineComponent({
     },
     shareByTwitter() {
       if(this.isDev()) return
-      const postMessage = "PHPカンファレンス関西2024 おすすめトーク診断!!"
+      const postMessage = "PHPカンファレンス関西2024 オススメトーク診断!!"
       const url = "https://twitter.com/share?url="
           + encodeURIComponent(this.shareUrl)
           + "&text=" + postMessage + "&hashtags=" + this.twitterHashtags
@@ -61,7 +61,7 @@ export default defineComponent({
       if(this.isDev()) return
       const url = "http://b.hatena.ne.jp/add?mode=confirm&url="
       + encodeURIComponent(this.shareUrl)
-      + "&title=PHPカンファレンス関西2024おすすめトーク診断!!"
+      + "&title=PHPカンファレンス関西2024オススメトーク診断!!"
       window.open(url, "_blank")
     },
     shareByCopy() {
