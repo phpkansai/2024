@@ -22,7 +22,11 @@
                     {{ suggestedTalk.title }}
                   </div>
                   <div class="text-subtitle1 q-pa-sm text-grey-8">
-                    {{ suggestedTalk.speaker.name }} (@{{ suggestedTalk.speaker.twitter }})さん
+                    {{ suggestedTalk.speaker.name }}
+                    <template v-if="suggestedTalk.speaker.twitter">
+                      (@{{ suggestedTalk.speaker.twitter }})
+                    </template>
+                    さん
                   </div>
                 </div>
               </div>
@@ -64,6 +68,17 @@
             >
 
               <q-list>
+                <q-item clickable v-close-popup @click="resultShareByLine">
+                  <q-item-section avatar>
+                    <q-avatar>
+                      <img src="~/assets/sns/x.png" alt="X"/>
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>X</q-item-label>
+                  </q-item-section>
+                </q-item>
+
                 <q-item clickable v-close-popup @click="resultShareByLine">
                   <q-item-section avatar>
                     <q-avatar>
@@ -242,7 +257,7 @@ export default defineComponent({
 }
 
 .php-con-card {
-  background-color: #fffacd;
+  background-color: #fbe9e8;
 }
 
 .php-con-logo {
