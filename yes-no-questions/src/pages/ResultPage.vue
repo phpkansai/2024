@@ -81,7 +81,7 @@
                     </q-avatar>
                   </q-item-section>
                   <q-item-section>
-                    <q-item-label>URLコピー</q-item-label>
+                    <q-item-label>共有メッセージコピー</q-item-label>
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -231,7 +231,6 @@ export default defineComponent({
       const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
           + "**" + this.suggestedTalk.title + "**\nby " + this.suggestedTalk.speaker.name + "さん\n"
       navigator.clipboard.writeText(message + this.shareUrl())
-      console.log(Notify)
       Notify.create('コピーしました!!')
     },
   }
@@ -291,7 +290,7 @@ export default defineComponent({
   bottom: 0px;
   right: 10px;
   width: 25%;
-  opacity: 0.9;
+  opacity: 1.0;
   z-index: -1;
 }
 </style>

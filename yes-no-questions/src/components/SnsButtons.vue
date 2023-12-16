@@ -76,7 +76,7 @@ export default defineComponent({
     },
     isDev() {
       // .env使えるようにしたい
-      return true
+      return false
     }
   }
 })
