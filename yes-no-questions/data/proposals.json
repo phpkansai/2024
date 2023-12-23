@@ -457,21 +457,6 @@
       }
     },
     {
-      "uuid": "4cb35448-a8ff-4f56-b34f-3f330e2610bb",
-      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/4cb35448-a8ff-4f56-b34f-3f330e2610bb",
-      "title": "開会式",
-      "abstract": "開会式",
-      "accepted": true,
-      "speaker": {
-        "name": "test",
-        "kana": "test"
-      },
-      "created": "2023-11-09T20:45:44+09:00",
-      "feedback": {
-        "open": false
-      }
-    },
-    {
       "uuid": "11de8269-dc0b-4882-acf1-6b8614d216dc",
       "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/11de8269-dc0b-4882-acf1-6b8614d216dc",
       "title": "レガシーコードに潜む奇妙なコメント　～信じるか信じないかはあなた次第～",
