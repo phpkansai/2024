@@ -21,7 +21,7 @@
                   <div class="text-h6 q-pt-sm text-weight-bolder text-grey-9 text-overflow-lines">
                     {{ suggestedTalk.title }}
                   </div>
-                  <div class="text-subtitle1 q-pa-sm text-grey-8">
+                  <div v-if="suggestedTalk.speaker.name" class="text-subtitle1 q-pa-sm text-grey-8">
                     {{ suggestedTalk.speaker.name }}
                     <template v-if="suggestedTalk.speaker.twitter">
                       (@{{ suggestedTalk.speaker.twitter }})
@@ -316,15 +316,27 @@ export default defineComponent({
       window.open(url, "_blank")
     },
     resultShareByLine() {
+      let speakerName = ""
+      if (this.suggestedTalk.speaker.name !== "") {
+        speakerName = "by " + this.suggestedTalk.speaker.name + "さん\n"
+      } else {
+        speakerName = ""
+      }
       const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
-          + this.suggestedTalk.title + "\nby " + this.suggestedTalk.speaker.name + "さん\n"
+          + this.suggestedTalk.title + "\n" + speakerName
       const url = "https://line.me/R/msg/text/?"
           + encodeURIComponent(message + this.shareUrl())
       window.open(url, "_blank")
     },
     resultShareByCopy() {
+      let speakerName = ""
+      if (this.suggestedTalk.speaker.name !== "") {
+        speakerName = "by " + this.suggestedTalk.speaker.name + "さん\n"
+      } else {
+        speakerName = ""
+      }
       const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
-          + "**" + this.suggestedTalk.title + "**\nby " + this.suggestedTalk.speaker.name + "さん\n"
+          + "**" + this.suggestedTalk.title + "**\n" + speakerName
       navigator.clipboard.writeText(message + this.shareUrl())
       Notify.create('コピーしました!!')
     },

@@ -762,6 +762,28 @@
       "feedback": {
         "open": false
       }
+    },
+    {
+      "uuid": "c8f5b32f-5a76-4340-9035-526a8a9023b0",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/accepted?l=c8f5b32f-5a76-4340-9035-526a8a9023b0",
+      "title": "LT(Lightning Talks)",
+      "abstract": "",
+      "accepted": true,
+      "speaker": {
+        "name": "",
+        "kana": "",
+        "twitter": "",
+        "avatar_url": ""
+      },
+      "created": "2023-11-12T23:59:40+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T14:35:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
     }
   ]
 }
