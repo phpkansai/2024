@@ -3,7 +3,7 @@
         "id": 1,
         "question": "初心者向けセッションが聞きたい?",
         "yes": 2,
-        "no": 13,
+        "no": 27,
         "resultTalkUuidWhenYes": "",
         "resultTalkUuidWhenNo": ""
     },
@@ -206,5 +206,13 @@
         "no": null,
         "resultTalkUuidWhenYes": "0e0befdb-2028-42c8-98e2-b19e434f5a82",
         "resultTalkUuidWhenNo": "bf2fe2a3-cd7d-4eaa-b7e5-0f63355423b6"
+    },
+    {
+        "id": 27,
+        "question": "勢いのあるトークを聞いて盛り上がりたい？",
+        "yes": null,
+        "no": 13,
+        "resultTalkUuidWhenYes": "c8f5b32f-5a76-4340-9035-526a8a9023b0",
+        "resultTalkUuidWhenNo": ""
     }
 ]
