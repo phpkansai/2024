@@ -131,71 +131,88 @@
 
         <div class="row justify-center">
           <div class="col-xs-11 col-md-7">
-            <q-card class="q-py-md php-con-card">
-              <q-item>
-                <q-item-section>
-                  <q-item-label class="text-center text-h6 text-weight-bold text-orange-10">
-                    PHPカンファレンス関西2024は<br/>2024年2月11日（日）開催!!
-                  </q-item-label>
-                </q-item-section>
-              </q-item>
-              <q-card-section horizontal class="justify-center">
-                <q-img
-                    class="col-5 php-con-logo"
-                    src="../assets/php_con_logo2024.png"
-                    fit="contain"
-                />
-                <q-card-section class="q-py-xs q-pr-xs">
-                  <q-list>
-                    <q-item
-                        clickable
-                        href="https://2024.kphpug.jp/"
-                        target="_blank"
-                        class="q-px-xs"
-                    >
-                      <q-item-section avatar>
-                        <q-icon color="red-11" name="home" />
-                      </q-item-section>
-                      <q-item-section>
-                        <q-item-label>公式サイト</q-item-label>
-                      </q-item-section>
-                    </q-item>
-
-                    <q-item
-                        clickable
-                        href="https://fortee.jp/phpcon-kansai2024/timetable"
-                        target="_blank"
-                        class="q-px-xs"
-                    >
-                      <q-item-section avatar>
-                        <q-icon color="red-11" name="date_range" />
-                      </q-item-section>
-                      <q-item-section>
-                        <q-item-label>タイムテーブル</q-item-label>
-                      </q-item-section>
-                    </q-item>
-
-                    <q-item
-                        clickable
-                        href="https://peatix.com/event/3752841/view?k=480d6bc1430a629adca5b030b2457224a3e4a4c6"
-                        target="_blank"
-                        class="q-px-xs"
-                    >
-                      <q-item-section avatar>
-                        <q-icon color="red-11" name="confirmation_number" />
-                      </q-item-section>
-                      <q-item-section>
-                        <q-item-label>チケット購入</q-item-label>
-                      </q-item-section>
-                    </q-item>
-                  </q-list>
-                </q-card-section>
-              </q-card-section>
-            </q-card>
+            <PhpConKansaiCard />
           </div>
         </div>
       </div>
     </Transition>
+
+    <q-dialog v-model="dialog">
+      <q-card class="bg-orange-2 dialog-card text-grey-9">
+        <q-card-section class="">
+          <div class="text-h6 text-center text-orange-10 text-weight-bold">
+            PHPカンファレンス関西2024は<br />
+            2024年2月11日（日）開催!!
+          </div>
+        </q-card-section>
+
+        <q-card-section class="q-py-none">
+          <div class="row justify-center">
+            <div class="col-6 text-center">
+              <q-img
+                  class="col-5 php-con-logo"
+                  src="../assets/php_con_logo2024_no_text.png"
+                  fit="contain"
+              />
+            </div>
+            <div class="col-6">
+              <q-list dense>
+                <q-item
+                    clickable
+                    href="https://2024.kphpug.jp/"
+                    target="_blank"
+                    class="q-px-xs"
+                >
+                  <q-item-section>
+                    <q-item-label>
+                      <q-icon color="red-11" name="home" size="large"/>
+                      公式サイト
+                    </q-item-label>
+                  </q-item-section>
+                </q-item>
+
+                <q-item
+                    clickable
+                    href="https://fortee.jp/phpcon-kansai2024/timetable"
+                    target="_blank"
+                    class="q-px-xs"
+                >
+                  <q-item-section>
+                    <q-item-label>
+                      <q-icon color="red-11" name="date_range" size="large"/>
+                      タイムテーブル
+                    </q-item-label>
+                  </q-item-section>
+                </q-item>
+
+                <q-item
+                    clickable
+                    href="https://peatix.com/event/3752841/view?k=480d6bc1430a629adca5b030b2457224a3e4a4c6"
+                    target="ticket"
+                    class="q-px-sm"
+                >
+                  <q-item-section>
+                    <q-item-label>
+                      <q-icon color="red-11" name="confirmation_number" size="large"/>
+                      チケット購入
+                    </q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </div>
+          </div>
+        </q-card-section>
+
+
+        <q-card-section class="text-center q-pb-none">
+          チケットはもう買った？？
+        </q-card-section>
+        <q-card-actions align="center">
+          <q-btn label="買った" size="md" color="amber-2 text-black" class="q-mx-md" @click="pushBoughtButton" />
+          <q-btn label="まだです" size="md" color="orange-7" class="q-mx-md" @click="pushNotBoughtYetButton" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
 
     <SnsButtons />
 
@@ -206,12 +223,14 @@
 import { defineComponent } from 'vue'
 import ProposalsData from "../../data/proposals.json"
 import ResultThumbnail from "../assets/resultThumbnail.png"
+import PhpConKansaiCard from "../components/PhpConKansaiCard.vue"
 import SnsButtons from "../components/SnsButtons.vue"
 import {Notify} from 'quasar'
 
 export default defineComponent({
   name: 'QuestionPage',
   components: {
+    PhpConKansaiCard,
     SnsButtons,
   },
   data() {
@@ -221,6 +240,7 @@ export default defineComponent({
       isShowButtons: false,
       resultThumbnailBackground: ResultThumbnail,
       buttonLabelMessage: "",
+      dialog: false,
       hideLabel: true,
     }
   },
@@ -229,6 +249,8 @@ export default defineComponent({
     setTimeout(() => {this.isShowTalkCard = true}, 1200)
     // その他ボタンの表示
     setTimeout(() => {this.isShowButtons = true}, 2500)
+    // ダイアログ表示制御
+    setTimeout(() => {if(this.isShowDialog())this.dialog = true}, 5000)
   },
   computed: {
     suggestedTalk() {
@@ -243,6 +265,45 @@ export default defineComponent({
     }
   },
   methods: {
+    /**
+     * ダイアログを表示するかどうかを判定する
+     */
+    isShowDialog() {
+      const randNumber = Math.floor(Math.random() * 5)
+      if (randNumber < 4) {
+        // 5回に1回表示
+        return false
+      }
+      const pushBoughtDate = localStorage.getItem("pushBoughtDate")
+      if(!pushBoughtDate) {
+        // ローカルストレージにデータがない場合は表示
+        return true
+      }
+      // 昨日以前に表示した場合は表示
+      const yesterday = (new Date()).setDate((new Date()).getDate() - 1)
+      return (new Date(pushBoughtDate) < new Date(yesterday))
+    },
+    /**
+     * ダイアログ「購入した」のボタンを押したときの処理
+     * ローカルストレージにボタン押下日を保存
+     */
+    pushBoughtButton() {
+      localStorage.setItem('pushBoughtDate', new Date().toDateString())
+      this.dialog = false
+    },
+    /**
+     * ダイアログ「まだです」のボタンを押したときの処理
+     * ローカルストレージのデータ削除
+     */
+    pushNotBoughtYetButton() {
+      localStorage.removeItem('pushBoughtDate')
+      const url = "https://peatix.com/event/3752841/view?k=480d6bc1430a629adca5b030b2457224a3e4a4c6"
+      window.open(url, "ticket")
+    },
+    /**
+     * 共有用URLを返す
+     * @returns {string}
+     */
     shareUrl() {
       return "https://2024.kphpug.jp/yntest/results/" + this.suggestedTalk.uuid + ".html"
     },
@@ -273,14 +334,6 @@ export default defineComponent({
 <style scoped>
 .page {
   padding-bottom: 80px;
-}
-
-.php-con-card {
-  background-color: #fbe9e8;
-}
-
-.php-con-logo {
-  max-width: 180px;
 }
 
 .result-card-background {
@@ -333,5 +386,13 @@ export default defineComponent({
   width: 23%;
   opacity: 1.0;
   z-index: -1;
+}
+
+.dialog-card {
+  min-width: 380px;
+}
+
+.php-con-logo {
+  max-width: 100px;
 }
 </style>
