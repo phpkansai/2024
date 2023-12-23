@@ -18,6 +18,9 @@
       <q-fab-action color="white" text-color="black" class="child-button" @click="shareByLine">
         <img src="~/assets/sns/line.png" alt="Line" class="sns-icon"/>
       </q-fab-action>
+      <q-fab-action color="white" text-color="black" class="child-button" @click="shareByFacebook">
+        <img src="~/assets/sns/facebook.png" alt="Line" class="sns-icon"/>
+      </q-fab-action>
       <q-fab-action color="white" text-color="black" class="child-button" @click="shareByTwitter">
         <img src="~/assets/sns/x.png" alt="Line" class="sns-icon"/>
       </q-fab-action>
@@ -55,6 +58,12 @@ export default defineComponent({
       const url = "https://twitter.com/share?url="
           + encodeURIComponent(this.shareUrl)
           + "&text=" + postMessage + "&hashtags=" + this.twitterHashtags
+      window.open(url, "_blank")
+    },
+    shareByFacebook() {
+      if(this.isDev()) return
+      const url = "https://www.facebook.com/sharer.php?u="
+          + encodeURIComponent(this.shareUrl)
       window.open(url, "_blank")
     },
     shareByHatebu() {

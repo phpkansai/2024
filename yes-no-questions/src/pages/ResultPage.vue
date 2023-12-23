@@ -68,7 +68,7 @@
             >
 
               <q-list>
-                <q-item clickable v-close-popup @click="resultShareByLine">
+                <q-item clickable v-close-popup @click="resultShareByTwitter">
                   <q-item-section avatar>
                     <q-avatar>
                       <img src="~/assets/sns/x.png" alt="X"/>
@@ -79,10 +79,21 @@
                   </q-item-section>
                 </q-item>
 
+                <q-item clickable v-close-popup @click="resultShareByFacebook">
+                  <q-item-section avatar>
+                    <q-avatar>
+                      <img src="~/assets/sns/facebook.png" alt="Facebook"/>
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>Facebook</q-item-label>
+                  </q-item-section>
+                </q-item>
+
                 <q-item clickable v-close-popup @click="resultShareByLine">
                   <q-item-section avatar>
                     <q-avatar>
-                      <img src="~/assets/sns/line.png" alt="Line"/>
+                      <img src="~/assets/sns/line.png" alt="LINE"/>
                     </q-avatar>
                   </q-item-section>
                   <q-item-section>
@@ -234,6 +245,14 @@ export default defineComponent({
   methods: {
     shareUrl() {
       return "https://2024.kphpug.jp/yntest/results/" + this.suggestedTalk.uuid + ".html"
+    },
+    resultShareByTwitter() {
+      window.open(this.tweetHrefUrl, "_blank")
+    },
+    resultShareByFacebook() {
+      const url = "https://www.facebook.com/sharer.php?u="
+          + encodeURIComponent(this.shareUrl())
+      window.open(url, "_blank")
     },
     resultShareByLine() {
       const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
