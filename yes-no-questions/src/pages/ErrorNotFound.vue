@@ -1,11 +1,11 @@
 <template>
-  <div class="fullscreen bg-deep-orange-3 text-white text-center q-pa-md">
+  <div class="bg-deep-orange-3 text-white text-center q-pa-md">
     <div>
       <div style="font-size: 3vh">
         404
       </div>
 
-      <div class="text-h5" style="opacity:.4">
+      <div class="text-h6" style="opacity:.4">
         お探しのページは見つかりません。
       </div>
 

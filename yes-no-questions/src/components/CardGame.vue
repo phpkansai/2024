@@ -19,7 +19,7 @@
       <div
           v-for="proposal in cards"
           :key="proposal.cardId "
-          class="col-sm-6 col-md-4 card-col"
+          class="col-xs-6 col-sm-6 col-md-4 col-lg-4 card-col"
       >
         <div v-show="isOpen(proposal.cardId)">
           <div v-if="proposal.isJoker">
