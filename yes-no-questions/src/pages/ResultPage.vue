@@ -18,7 +18,7 @@
             <q-img :src="resultThumbnailBackground" >
               <div class="absolute-full text-center flex flex-center result-card-background">
                 <div>
-                  <div class="text-h6 q-pt-sm text-weight-bolder text-grey-9 text-overflow-lines">
+                  <div class="text-h6 q-px-md q-pt-sm text-weight-bolder text-grey-9 text-overflow-lines">
                     {{ suggestedTalk.title }}
                   </div>
                   <div v-if="suggestedTalk.speaker.name" class="text-subtitle1 q-pa-sm text-grey-8">
@@ -406,8 +406,8 @@ export default defineComponent({
 .memory-chan04 {
   position: absolute;
   bottom: 0px;
-  right: 5px;
-  width: 23%;
+  right: 4px;
+  width: 22.5%;
   opacity: 1.0;
   z-index: -1;
 }
