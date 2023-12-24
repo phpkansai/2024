@@ -1,0 +1,789 @@
+{
+  "proposals": [
+    {
+      "uuid": "1cb30b96-0bc9-43a0-b7ea-d3e19348c021",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/1cb30b96-0bc9-43a0-b7ea-d3e19348c021",
+      "title": "コードを自在に操るためのPHP文法入門",
+      "abstract": "PHPのソースコードを正確に検査したり、ソースコードの一部を書き換えたいと思ったことはありませんか？\r\n\r\nPHPにはPHP-Parserという構文解析ライブラリがあり、静的解析ツールのPHPStanやリファクタリングツールのRectorはPHP-Parserをベースにしたプラグインでソースコードを検査したり、ソースコードを書き換えたりすることができます。\r\n\r\nしかしながら、構文木を操作するには普段何気なくPHPコードを書く以上のプログラミング言語についての知識が求められます。この発表では構文木を取り扱う前提となるプログラミング言語についての知識、PHP-Parserの構造、PHPStanとRectorそれぞれの拡張方法と実例についても紹介します。",
+      "accepted": true,
+      "speaker": {
+        "name": "うさみけんた",
+        "kana": "ウサミケンタ",
+        "twitter": "tadsan",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/7c125dcd-e74d-4c8b-9908-94189eda6a49.jpg"
+      },
+      "created": "2023-10-08T17:53:00+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T13:20:00+09:00",
+        "length_min": 40
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "65343fcd-ae18-4378-a32a-6577e546be52",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/65343fcd-ae18-4378-a32a-6577e546be52",
+      "title": "はじめてのOSSコントリビュート",
+      "abstract": "我々の業界では、オープンソースソフトウェア（ハードウェア）によって支えられています。\r\nPHPもオープンソースです。いきなりですが、そんなPHPに何かで貢献してみませんか？\r\n\r\n本トークではオープンソースによって得られる恩恵と、貢献の仕方・手法をご説明します。\r\nphp-srcに貢献しているぼくが個人的に嬉しい貢献をバーっと並べていきます。\r\nたとえば\r\n\r\n - typoの修正\r\n - The PHP Foundationへの寄付\r\n - ドキュメント(doc-ja、doc-en)の修正\r\n - Issueで書けるFeature request(新機能の追加や既存の機能の提案))\r\n - Issue\r\n - PHPで書かれている.phptファイルの追加\r\n\r\n初心者でもやっていけることをやることでオープンソースに貢献をすることで知見が得られ、\r\nエキスパートへの道を一歩踏み出すきっかけになれば幸いです。\r\nおおきに",
+      "accepted": true,
+      "speaker": {
+        "name": "てきめん",
+        "kana": "テキメン",
+        "twitter": "youkidearitai",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/6f46fc08-ea22-452e-af82-45c05a66d07d.jpg"
+      },
+      "created": "2023-10-09T00:51:24+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T10:50:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "b3f6ed97-8551-40da-90b1-3a14697df303",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/b3f6ed97-8551-40da-90b1-3a14697df303",
+      "title": "モデルとは何か",
+      "abstract": "PHPerのあなたにとって、\"モデル\"とは何ですか？\r\nLaravelユーザーにとってはデータベースに保存された1件のレコードを表すアレかもしれませんが、一口に\"モデル\"と言っても利用シーンや文脈ごとに意味が異なります。\r\nさまざまな\"モデル\"を見ながら正体を探ってみたいと思います。\r\n",
+      "accepted": true,
+      "speaker": {
+        "name": "菱田裕美",
+        "kana": "ヒシダヒロミ",
+        "twitter": "77web",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/05013efb-ca82-4a05-99a4-26b224a081ae.jpg"
+      },
+      "created": "2023-10-09T15:09:22+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T15:10:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "6e9e5c05-ae72-4712-8f92-70f86a3336df",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/6e9e5c05-ae72-4712-8f92-70f86a3336df",
+      "title": "令和最新版 PHP メモリ管理術",
+      "abstract": "何度も遭遇する PHP の「Allowed memory size ...」。しかし、結局解決方法がわからず、最後には memory_limit を -1 にしてその場を凌ぐという苦い経験をした方も多いのではないでしょうか。\r\nPHP ではガベージコレクションもそれなりに発達しており、メモリを気にしないで書けるから良いと思っている人も少なからずいらっしゃると思います。\r\nstatic はメモリ効率がいい… PHP 8.1 から導入された readonly などの機能を制限する書き方をすればメモリ効率がいいなど考えている方もいらっしゃるかもしれません。\r\nそこで本トークでは、PHP では本当にメモリについて気にしなくていいのか。そして，どのようにすれば省エネにメモリを使えるのか。PHP のメモリ確保の仕組みや最適化の仕組み，そしてメモリ効率の良い書き方のヒントまで含めてお話できればと思います。",
+      "accepted": true,
+      "speaker": {
+        "name": "めもり〜☆",
+        "kana": "メモリー",
+        "twitter": "m3m0r7",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/5769619f-ef2f-4f36-a88e-477e12023bd4.png"
+      },
+      "created": "2023-10-12T19:43:22+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T11:10:00+09:00",
+        "length_min": 40
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "4e03491c-2a97-40aa-8ff9-a68593b0e847",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/4e03491c-2a97-40aa-8ff9-a68593b0e847",
+      "title": "RDBアンチパターンと戦う - 削除フラグ 完全攻略ガイド",
+      "abstract": "目の前に立ちはだかる削除フラグ......\r\n削除フラグがアンチパターンであることは知っていても、目の前の削除フラグと付き合っていくしか無い...\r\nそう思って諦めていませんか？\r\n\r\n削除フラグを既存のアプリケーションに影響をできるだけ閉じて無くすことはできます。\r\nテーブルから状態や属性を別のテーブルに移し、アプリケーションを壊すことなくリファクタリングしていくために必要なことを説明します。\r\n\r\n- 削除フラグがあるテーブルをどうやって分割するか\r\n- 既存のコードの振る舞いを維持しながら如何にリファクタリングするか\r\n- リファクタリングをやりきる ために必要なステップ\r\n\r\nレガシィコードと向き合い、リファクタリングして、目の前のプロダクトを改善している現場のテクニック、余すこと無くお話します！",
+      "accepted": true,
+      "speaker": {
+        "name": "曽根 壮大",
+        "kana": "ソネ タケトモ",
+        "twitter": "soudai1025",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/d4ab8c67-8130-4c01-a003-036763f365fe.png"
+      },
+      "created": "2023-10-12T20:57:33+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T11:10:00+09:00",
+        "length_min": 40
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "1ece99f8-82c3-4a87-a684-6649350fdf74",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/1ece99f8-82c3-4a87-a684-6649350fdf74",
+      "title": "CodeRevieweeが求められること",
+      "abstract": "誰かの書いたコードが世に出る過程で、コードレビューを行う組織は多いのではないでしょうか。\r\nコードの質を担保するため。属人化を防ぐため。知識共有や認識合わせのため。チーム内のスキルアップのため。\r\nコードレビューは様々な意味や目的を持って行われます。\r\n\r\n先日発表したPHP Conference2023「CodeReviewerが求められること」の続編です。\r\nhttps:\/\/fortee.jp\/phpcon-2023\/proposal\/25891e6c-7762-47b5-8cb3-e3db7f056abc\r\n\r\n前回のおさらいや、PHPコード上でのコミュニケーション例の紹介、\r\nそしてどんなコーディングやPullRequestの出し方がCodeReviewerに求められるものとなっているのかに迫ります。\r\n\r\n少しでもお役に立てると幸いです。\r\n\r\n対象者： コードレビューに携わる全エンジニア（役職問わず）",
+      "accepted": true,
+      "speaker": {
+        "name": "おのぽん",
+        "kana": "オノポン",
+        "twitter": "onopon_engineer",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/531420ea-33cb-46d7-aaeb-b9fa614925d8.jpg"
+      },
+      "created": "2023-10-17T09:34:18+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T13:00:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "8daa1c68-69b1-458a-9f3a-0c9a86e7843e",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/8daa1c68-69b1-458a-9f3a-0c9a86e7843e",
+      "title": "Mutation Testingとはなにか？ 〜Laravel(Pest)でInfectionを利用したライブデモ〜",
+      "abstract": "[Mutation Testing](https:\/\/research.google\/pubs\/pub46584\/) とは、プロダクションコードに対するテストコードがどれだけ十分なものか、というテストの品質自体を評価するテスト手法です。\r\n\r\nMutation Testing を導入することで何がよいかというと、**見かけ上のコードカバレッジが高く、作成したソースコード全般的にテストコードが網羅できていたとしても、テストコードが正しく書けているとは限らないのですが、その部分を簡単に検出できる**ということです。\r\n\r\n今回は「Mutation Testingとは？」という詳しいお話から始め、実際にInfection PHPを利用してMutation Testing をライブデモしながらお話をすることで、より品質の高いテストコードの作成に寄与できればと考えています。",
+      "accepted": true,
+      "speaker": {
+        "name": "Kanon",
+        "kana": "カノン",
+        "twitter": "samurai_se",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/5915ce36-d0ca-4791-8844-926592454085.jpg"
+      },
+      "created": "2023-10-22T00:52:52+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T14:35:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "06582204-df2a-4af5-b301-4d394e064b0f",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/06582204-df2a-4af5-b301-4d394e064b0f",
+      "title": "なんで、ファイル名とクラス名を揃えるの？ 知っておきたいautoloadのはなし",
+      "abstract": "Target class [...] does not exist.\r\nこのようなエラーを見たことはないでしょうか？そして、よくわからないけど、ファイル名を直したらうまく動くようになった！という経験はないでしょうか？\r\n\r\n実はこの裏ではautoloadという仕組みが働いています。\r\n\r\nautoloadがどういう仕組みで動いているのかを知ることで、ファイルが読み込まれない時やクラスが見つからない時の原因が早くみつけられるかもしれません。\r\n\r\nこのトークではPHP初心者向けにautoloadの仕組みを少し掘り下げてお話しします。\r\n\r\nトークの内容\r\n・autoloadは何を解決するか\r\n・autoloadのルール\r\n・autoloadを実現する仕組み",
+      "accepted": true,
+      "speaker": {
+        "name": "赤塚啓紀",
+        "kana": "アカツカアキノリ",
+        "twitter": "aki_artisan",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/7e1d4b54-7c89-4f08-a805-64f8dc326f93.jpg"
+      },
+      "created": "2023-10-25T08:25:03+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T14:15:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "70f13905-fb5a-4f53-ae1c-04e1e700fdad",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/70f13905-fb5a-4f53-ae1c-04e1e700fdad",
+      "title": "Laravel の開発時、メールのデバッグってどうやってますか？",
+      "abstract": "メールを送る処理の実装時うっかり誰かに送ってしまうことはないでしょうか？\r\n開発時のメールの誤送信事故を防止するために、ダミーのメールサーバに送るようにするということが多いかと思います。\r\nMailcatcher や Mailhog、Mailpit などの便利なツールが公開されていますが何か使われていますか？\r\n\r\n弊プロダクトでは、ツールは利用せずにログにメールの送信内容を出力しています。\r\n\r\nこのアプローチでの Laravel を利用した開発時のメリットとデメリット、ログの可読性を上げるための工夫など私たちが行っていることを紹介します。",
+      "accepted": true,
+      "speaker": {
+        "name": "benzoh",
+        "kana": "ベンゾウ",
+        "twitter": "benzoh_w",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/9c99950f-9c45-48c4-a2e5-83d8bea22009.jpg"
+      },
+      "created": "2023-10-27T16:48:51+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:50:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "5a7050df-3943-45b0-8944-b363205c01f7",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/5a7050df-3943-45b0-8944-b363205c01f7",
+      "title": "ここが変だよPHP（褒め言葉）　入門編",
+      "abstract": "みなさん、PHPを初めて学んだ時に感じた「？」を覚えていますか？\r\n\r\n私の所属する開発チームでは、PHPマニュアルの精読を始めました。\r\n精読してみて改めて感じたPHP独自の魅力について、皆さんに共有したいと思います。\r\nこのセッションでは、PHPの特殊な機能、他のプログラミング言語との比較、その機能ができた背景について、私なりに調べた結果や考察を発表します。\r\n\r\n対象者:\r\n- 他のプログラミング言語からPHPに転向を考えているエンジニア\r\n- PHPの良さを知りたいエンジニア",
+      "accepted": true,
+      "speaker": {
+        "name": "BABY JOB ミヤギ",
+        "kana": "ベビージョブ ミヤギ",
+        "twitter": "KizuMiyagi",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/9123835d-2a80-4e23-911c-3674b3f210a3.jpg"
+      },
+      "created": "2023-10-28T22:00:58+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:30:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "d2406310-e9dc-4866-851c-20662ae04fa8",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/d2406310-e9dc-4866-851c-20662ae04fa8",
+      "title": "その条件分岐って本当に必要？",
+      "abstract": "弊社では文化として受け継がれている「条件分岐禁止」というのがあります。\r\n条件分岐禁止バンドをつくっちゃうほどに\r\n\r\n条件分岐があることでコードが複雑化してしまったり見にくくなってしてしてしまいます。\r\n\r\nそのアンチパターンやどうしたら良いコードになるのかを話します。\r\n\r\n対象者: PHPのコードを綺麗に書きたい人",
+      "accepted": true,
+      "speaker": {
+        "name": "伊神 誠人",
+        "kana": "イカミ マコト",
+        "twitter": "mako5656_i",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/03c33d4e-00b6-4bfd-86c4-6faa9d709f66.jpg"
+      },
+      "created": "2023-11-01T14:04:42+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T14:15:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "10c6f1ac-ec4b-4895-8db7-39b9a13c84bb",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/10c6f1ac-ec4b-4895-8db7-39b9a13c84bb",
+      "title": "レガシーシステムへのPHPStan導入から半年での課題と効果",
+      "abstract": "静的解析ツールは使っていますでしょうか？\r\n昨今のPHPのバージョンアップでは型定義が厳しくなってきており、静的解析ツールを導入することの優位性が高まってきています。\r\n15年以上続いているレガシーシステムにPHPStanを導入した際の課題と効果について紹介します。\r\n\r\n・既存の静的解析ツールからPHPStanへの移行\r\n・PHPStanの導入時の課題\r\n・導入から半年での効果と課題\r\n\r\n既存の静的管理ツールに課題を感じている方や、静的解析ツールを導入したいと考えている方にとって参考になる内容となっています。\r\n",
+      "accepted": true,
+      "speaker": {
+        "name": "don",
+        "kana": "ドン",
+        "twitter": "zaregoto32"
+      },
+      "created": "2023-11-01T20:29:35+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T10:50:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "bfea7efc-c0d2-4451-bed3-4c884b1218bf",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/bfea7efc-c0d2-4451-bed3-4c884b1218bf",
+      "title": "完全未経験のIT初心者に、2か月ほど夜な夜な PHP を教えてみた結果",
+      "abstract": "先日、製造業で働いている友人から**IT業界に転職したい**という話をいただいたのですが、その際にある疑問が湧きました。\r\nそれは、**完全な初心者が2か月間訓練したら、どれくらいPHPが書けるようになるのだろうか……？**というものです。\r\nお互いに平日はお仕事があるので、夜中や休日にひっそりとお勉強するしかありません。\r\n\r\nIT未経験の若者が苦労の末 **2か月間でPHPを習得する** 話、 聞いてみたくない ？\r\n\r\n**具体的な内容**\r\n- **PHPやバックエンド**について教えた2か月間の記録\r\n- **教わる側の新人目線**でどういうところが**キツイと感じたか**についてのぶっちゃけ裏話\r\n- **実際に教えた技術**と**実践で作ったもらった成果物**の紹介\r\n**対象者**\r\n- 未経験エンジニアの可能性に興味がある方\r\n- 新人教育で**PHP**を教える際に**難しさ**を感じている方",
+      "accepted": true,
+      "speaker": {
+        "name": "kerokero",
+        "kana": "ケロケロ",
+        "twitter": "22kerokero22",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/92522535-4c7f-4911-8d41-434d9478dd4f.jpg"
+      },
+      "created": "2023-11-02T02:27:56+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:40:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "42712995-5f3e-4c68-a951-39584eac95a1",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/42712995-5f3e-4c68-a951-39584eac95a1",
+      "title": "アプリケーションエンジニアこそ「監視」だよね！と私が考える訳",
+      "abstract": "開発と運用が分かれていた時代、「コードを書く人」から見て「本番システムの監視」は遠い存在だったと聞きます\r\n──「アプリ側」の自分から見て、「それって本当に勿体ないぜ」と強く感じるのです！\r\n\r\n頑張って作ったWebアプリケーション、ユーザーに気持ちよく使ってもらいたいですよね\r\nそのために、少しだけ視野を広げてみませんか？\r\n\r\n## ねらい\r\n開発者としてサービスに関わる人に、少しでも「良いものを届ける」ために「監視もやるぞ！！」という想いを持ち帰ってもらう\r\n\r\n## こんな人に伝えたい\r\n* コードを書くの楽しい、もっと楽しみたい！人\r\n* (とりわけ)自社サービスに関わっている人\r\n\r\n## こんな事を話します\r\n* そもそも監視ってどんなこと？なんで？\r\n* アプリケーション開発者でも出来ることあるの？\r\n* 実は「アプリ側」こそ大事な存在！\r\n\r\n## 関連キーワード\r\n* サービス運用\r\n* オブザーバビリティ",
+      "accepted": true,
+      "speaker": {
+        "name": "きんじょうひでき",
+        "kana": "きんじょうひでき",
+        "twitter": "o0h_",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/7b75b086-c7d6-4735-9efe-e26287fa97b6.jpg"
+      },
+      "created": "2023-11-02T10:22:24+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T13:00:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "a60c9e18-bc61-4f60-80d0-0a0ea7a205c4",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/a60c9e18-bc61-4f60-80d0-0a0ea7a205c4",
+      "title": "「\"品質\"が高いコード」って何？",
+      "abstract": "なんとなく口にしがちな「\"品質\"が高いコード」。\r\n\r\n定義があいまいで要領を得ないため、すり合わせはおろか万人が万人の「願望する\"品質\"」の話に終始してきました。\r\n\r\n一方で「品質」は工業規格としての定義があります。\r\n\r\nこのトークでは工業規格の定める「品質」に基づいて、「\"品質\"が高いコード」の定め方と達成の仕方についてお話します。\r\n\r\nこのトークで得られる知見\r\n\r\n1. \"品質\"の定義\r\n2. \"高品質\"の達成の仕方\r\n3. ユニットテストにおける\"「どこまでやるか？」の割り出し方\"\r\n4. \"品質\"を高めるためのテストとは\r\n\r\nこのトークで話さない事\r\n\r\n1. 品質工学\r\n",
+      "accepted": true,
+      "speaker": {
+        "name": "若葉 章",
+        "kana": "ワカバ アキラ",
+        "twitter": "effy_staffs",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/29fdb114-4c04-4980-9d8a-ee23ea2e193e.png"
+      },
+      "created": "2023-11-05T23:39:46+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T11:10:00+09:00",
+        "length_min": 40
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "61cc5022-b485-4d87-81bc-8d6d2a9c038d",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/61cc5022-b485-4d87-81bc-8d6d2a9c038d",
+      "title": "初心者だからこそ使って欲しい！Xdebugによるスマートデバッグ術",
+      "abstract": "普段どういう風にlaravel開発を行なっていますか？\r\nデバッグする時にddやlogなど使用していますか？\r\n今回紹介するXdebugではより洗練され、便利で、直感的なデバッグが可能になります。\r\n私自身、同僚にXdebugを教えてもらってからその利便性に驚かされました。\r\n簡単なデモ動画でXdebgの初期設定、基本動作、共有できればと思っています。\r\n皆さんの開発作業の効率が格段に向上するはずです。ぜひこの機会にXdebugの魅力を実感していただければ幸いです。",
+      "accepted": true,
+      "speaker": {
+        "name": "kaho",
+        "kana": "カホ"
+      },
+      "created": "2023-11-07T18:07:38+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:55:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "8c1e1f21-2b1d-4c66-ad4b-f90577a424e5",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/8c1e1f21-2b1d-4c66-ad4b-f90577a424e5",
+      "title": "Laravelでミニマム開発からスタートして個人サービスを利益化するまでの経験談！",
+      "abstract": "世の中には数多くのシステムサービスがありますが、少額であっても利益化まで持っていけるサービスは本当に限られるかと思います。\r\nそこで今回は自分がリリースしているサービスで、少しですが利益化できたサービスの技術構成やLaravelだからこそできるサーバー代節約術、どうやってユーザーを獲得したのか、どのような告知を打ったのか、その費用対効果はどうだったのかなど、「技術的な側面」と「ビジネス的な側面」両方から経験に基づいたお話をしたいと思います！",
+      "accepted": true,
+      "speaker": {
+        "name": "mukae",
+        "kana": "ムカエ",
+        "twitter": "mukae9",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/19812e35-0fb2-45c2-954c-363baeda30e0.jpg"
+      },
+      "created": "2023-11-07T18:08:56+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T10:50:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "59ccd243-869e-4c77-87d3-e5ab755ec02a",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/59ccd243-869e-4c77-87d3-e5ab755ec02a",
+      "title": "PHP8.1で、リソースがオブジェクトに！？ ～マイナーリリースの変更がレガシープロダクトに与えた影響～",
+      "abstract": "PHP8.1では、いくつかのリソースがobjectに移行しました。\r\n例えば\r\npgsql result リソース → PgSql\\Result オブジェクト\r\npgsql link リソース → PgSql\\Connection オブジェクト\r\nなどです。\r\n\r\n私が開発しているMaildealerは、すでに開発から20年以上経過しているレガシープロダクトです。\r\nその中に存在する PgSQL 用の独自ライブラリは、すべてがリソースで扱うことが前提のコードになっていました。\r\n\r\nマイナーリリースで気軽に入れられた変更が、レガシープロダクトに与えた影響と、その解決方法をお話します！",
+      "accepted": true,
+      "speaker": {
+        "name": "廣部 知生",
+        "kana": "ヒロベ トモキ",
+        "twitter": "tomoki2135",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/71265baf-b1d3-4ac9-800f-53ff4e8c5ad3.jpg"
+      },
+      "created": "2023-11-08T15:12:44+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:35:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "bf2fe2a3-cd7d-4eaa-b7e5-0f63355423b6",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/bf2fe2a3-cd7d-4eaa-b7e5-0f63355423b6",
+      "title": "レガシーとモダンなシステムが混在する開発環境を改善しよう",
+      "abstract": "古くからあるサービスには、機能強化とともにサブシステムが増えていきました。\r\n\r\n最初は良いけれど、\r\n・検証サーバーは共用だったり、個人毎だったりバラバラに存在\r\n・共用サーバーには、交代して使用する為に待ち時間が発生\r\n・複数の人が使うので、テストデータがぐちゃぐちゃに\r\n・サブシステムが増える度にサーバーも増えてくる\r\n・当然、ソース修正や管理、デプロイもややこしくなる\r\nというような問題が、だんだん見えてきました。\r\n\r\nでは、この問題の改善にチャレンジしよう！とは言いつつ、\r\n「今まで使い慣れたエディタやリポジトリ構成、開発の流れは変えたくないよ」という声もあります。\r\nさて、どの様に改善していったでしょうか。\r\n\r\n・Dockerで共用サーバーを廃止して、メンバー毎の環境を整理しましょう\r\n・コンテナ環境でも今まで通りPhpStormで開発作業ができるようにしましょう\r\n・ユニットテストもうまく連携しましょう",
+      "accepted": true,
+      "speaker": {
+        "name": "井上良太",
+        "kana": "イノウエリョウタ"
+      },
+      "created": "2023-11-08T17:57:22+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T13:00:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "1210f428-5e74-4f57-bf8e-4c81f3f75b8c",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/1210f428-5e74-4f57-bf8e-4c81f3f75b8c",
+      "title": "PHPを勉強してからプログラミングが好きになった話",
+      "abstract": "私が最初に出会ったプログラミング言語は大学の授業で勉強したC言語でした。授業や試験で問題を解くためにC言語を勉強していました。\r\n\r\nですが、授業外でHTMLやCSS, JavaScriptでWEBサイトを制作し、そこでPHPに出会いプログラミングが好きになりました。ここで初めて「プログラミング = 授業で勉強するもの」の考え方がなくなりました。プログラミングでWEBアプリケーションを作成し、エラーに苦しんで、実際に動かす体験は嬉しさと楽しさでワクワクしていました。\r\n最初は**ノンフレームワークのペライチのコード**を書き、次は**フレームワークで開発**、一周回って**ノンフレームワーク**で開発しました。\r\n\r\n本セッションでは、PHPで「作ることが楽しい」体験から「コードが書ける、読める楽しさ」に変化していった経験についてお話しします。",
+      "accepted": true,
+      "speaker": {
+        "name": "うーたん",
+        "kana": "ウータン",
+        "twitter": "uutan1108",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/63a4bdeb-3e90-4a43-b98c-67e1a7f14bfa.jpg"
+      },
+      "created": "2023-11-08T19:39:03+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:45:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "e2432bdb-6320-4034-a51a-b6cadcf67177",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/e2432bdb-6320-4034-a51a-b6cadcf67177",
+      "title": "PHP8.2にバージョンアップしたら文字化けが発生して道頓堀に飛び込みたくなった話",
+      "abstract": "皆さんはリリース後に文字化けが発生して、道頓堀に飛び込みたくなったことはありますか？\r\n私はあります(※)。\r\n\r\nPHP8.2の下位互換性のない修正の1つにmb_detect_encodingの文字コード検出の仕様変更があります。\r\n\r\n私が担当しているメール共有サービスのメールディーラーでバージョンアップ後に、一部の受信メールが文字化けをしました。\r\n\r\n受信したメールのエンコード時にmb_detect_encodingを使っていたからです。\r\n\r\n下位互換性がないため文字化けを回避することができず、結果的にメールヘッダに文字コードの指定がないRFCに準拠していないメールまで対応しました。\r\n\r\nメールディーラーの保守運用・顧客対応チームのリーダである私が顧客対応で泣きをみたことを中心にお話いたします。\r\n\r\n私と同様に顧客対応されているエンジニアの方々の参考になれば幸いです。\r\n\r\n※実際には飛び込んでいません",
+      "accepted": true,
+      "speaker": {
+        "name": "藤掛治",
+        "kana": "フジカケオサム",
+        "twitter": "osamu_insect"
+      },
+      "created": "2023-11-09T09:35:19+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T14:15:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "11de8269-dc0b-4882-acf1-6b8614d216dc",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/11de8269-dc0b-4882-acf1-6b8614d216dc",
+      "title": "レガシーコードに潜む奇妙なコメント　～信じるか信じないかはあなた次第～",
+      "abstract": "開発をしているときにコメントがあると助かりますよね。\r\n「なるほど、ここはそういう処理をしてるのか！」と、コードの中身を詳しく読まなくとも実装を進めることができます。\r\nしかし、時としてコメントは嘘をつき、あなたを陥れます。\r\n特に古いシステムではこれまでに蓄積され、忘れられ、熟成されたコメントが至るところに散りばめられています。\r\n\r\n私が普段開発をしているメール共有サービス メールディーラーはリリースから20年以上が経つサービスであり、熟成されたコメントが多数存在します。\r\n本LTでは私が実際に遭遇したレガシーコードに潜む奇妙なコメントをご紹介し、コメントを信じることが如何に危険なことであるかを知っていただきます。\r\n\r\nコメントを信じるか信じないかはあなた次第です！",
+      "accepted": true,
+      "speaker": {
+        "name": "山村光平",
+        "kana": "ヤマムラコウヘイ",
+        "twitter": "yamamu096454848",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/9aec8337-2384-47ca-992e-ee126f648157.jpg"
+      },
+      "created": "2023-11-10T17:14:27+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:20:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "012b22df-47d8-4552-9cbe-58362130291c",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/012b22df-47d8-4552-9cbe-58362130291c",
+      "title": "PHPで生成AIのAPIをやってみた",
+      "abstract": "ChatGPTの人気で、話題沸騰の生成AI。\r\nPythonではなく、PHPでOpenAIのAPIをつかう方法をやってみました。\r\n\r\nPythonが一般的に使用される中、PHPを活用してAI技術を取り入れる方法を実際のコード例を説明します。\r\n\r\n- OpenAIのAPIにアクセスするための基本的な手順の説明\r\n- APIキーの管理とセキュリティについてのベストプラクティス\r\n- PHPを使用して、生成AIを活用してテキスト生成を行う実際のコード例\r\n- 生成AIを使用することで解決できる問題やビジネスへの適用可能性について\r\n上記をご紹介したいと思います。",
+      "accepted": true,
+      "speaker": {
+        "name": "有本雅哉",
+        "kana": "アリモトマサヤ",
+        "twitter": "ixcy",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/d97aaece-f08f-451c-8838-199a099cc59f.jpeg"
+      },
+      "created": "2023-11-10T23:09:12+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T15:30:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "90e8390b-3054-430c-8535-4601f251408d",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/90e8390b-3054-430c-8535-4601f251408d",
+      "title": "nullsafe演算子を使おう〜if文地獄からの開放〜",
+      "abstract": "PHP8.0にて導入されたnullsafe演算子（null安全演算子）。\r\nメソッドチェーンしたいけどnullableだからnullチェックしないといけない、そんなときに大活躍するのがこのnullsafe演算子です。\r\n\r\nご存じの方も多いかも知れませんが、改めてその有用性や使い方を「今まではこう書いていた」という事例であるif文での書き方やnullObjectパターンを添えてご紹介したいと思います。\r\n\r\nnullsafe演算子を使いこなして、より効率的なコードを書く第一歩を踏み出しましょう。\r\n\r\n想定視聴者\r\n- nullsafe演算子聞き覚えがないな、という方\r\n- 聞いたことはあるけどいまいち使い道がわからないな、という方\r\n- nullチェックで苦労した方\r\n- 最近PHP8.xに触れて新しい書き方をキャッチアップ中な方",
+      "accepted": true,
+      "speaker": {
+        "name": "仲見川勝人",
+        "kana": "ナカミガワカツト",
+        "twitter": "NakMeKtt",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/5bd54fb4-012d-4dfd-aa4f-f449ccefa3af.jpg"
+      },
+      "created": "2023-11-11T10:02:12+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T15:10:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "b2681a73-5ca1-4641-9075-b1fef952d8d9",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/b2681a73-5ca1-4641-9075-b1fef952d8d9",
+      "title": "こまけぇこたぁいいんだよ!! PHPWebアプリケーションを早くする、それだけだ",
+      "abstract": "速いは正義、アプリケーションは速くあるべきです。\r\n\r\nではどうすれば良いのか\r\n\r\n細かい理論などは気にしない、こうしたら早くなった\r\n\r\n結果を貼り付けながら、何をしたのかひたすら話します\bが、細かいことは話しません\r\n\r\nOS、Webサーバー、PHP、RDBMS等の見直すべき要素に関して、情報を詰め込むだけ詰め込むことに挑戦します。\r\n\r\n※注釈は付けますので細かな理論はそちらでご確認ください\r\n\r\n- 想定する聴講者\r\n    - PHPWebアプリケーションのパフォーマンスに興味がある方\r\n    - PHPのインフラを整備するエンジニア\r\n    - PHPでISUCONに挑戦する方\r\n\r\n- お話しないこと\r\n    - パフォーマンス以外の話\r\n    - アプリケーションコードによる改善\r\n    - 劇的なパフォーマンス改善策",
+      "accepted": true,
+      "speaker": {
+        "name": "清家史郎",
+        "kana": "セイケシロウ",
+        "twitter": "seike460",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/ab5821d0-c281-47dd-b16a-c6fd6d185714.jpg"
+      },
+      "created": "2023-11-11T10:36:36+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T16:25:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "c70954c0-416c-4113-ab7d-067555538da2",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/c70954c0-416c-4113-ab7d-067555538da2",
+      "title": "OpenTelemetry PHPで始める！オブザーバビリティ入門",
+      "abstract": "みなさんはシステム障害が起きた時、どのように調査を行いますか？\r\n根拠となるデータを元に仮説を立てて検証するというのがセオリーですが、時に必要なデータが無くて行き詰まったり、経験則や自身の勘に頼ってしまいがち、という事もあると思います。\r\n\r\nOpenTelemetry はシステムの状態を可視化するためのデータ(テレメトリーデータ)を収集するためのツールとして登場し、オブザーバビリティを高めることがやりやすくなっています。そして、OpenTelemetry PHPが最近GAされたことでPHPアプリケーションにもこの波がやってきました。\r\n\r\n本セッションではオブザーバビリティ入門したい方向けに、以下のことをお話しします。\r\n\r\n- OpenTelemetryの概要\r\n- OpenTelemetry PHPを使ってテレメトリーデータを収集・分析する方法",
+      "accepted": true,
+      "speaker": {
+        "name": "古賀 敦士",
+        "kana": "コガアツシ",
+        "twitter": "atKoga_",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/e3aa19f0-264e-4e37-b3f2-b066c2eb45d5.jpg"
+      },
+      "created": "2023-11-11T11:17:34+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T15:50:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "30494f3c-b928-43b8-a617-f8c4a6992e08",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/30494f3c-b928-43b8-a617-f8c4a6992e08",
+      "title": "20年の歴史を持つプロダクトの開発チームの変革：技術広報の本質と効果",
+      "abstract": "情報発信の種を育てるには、どうすればよいのでしょうか。そもそも、情報発信は何のためにするのでしょうか。\r\n\r\n遡ること2019年、それまでGaroon開発チームは外部に向けた情報発信をほとんどおこなっていませんでした。\r\n長年の開発による負債に悩まされ、自分たちの仕事を魅力的だと感じられなかったことが大きな要因のひとつでした。\r\nしかし、とある会を皮切りに、開発者にとって魅力的なプロダクトを目指して活動することができ、徐々に状況は変わっていきました。\r\n\r\n私は、長年Garoon開発チームに所属しつつ、技術広報を兼務してきました。\r\nGaroon開発チームの変化と共に歩んだからこそ見えてきた、情報発信を続ける理由と技術広報としての関わり方、目指すものをお話しします。\r\n情報発信について考えている方々に届き、情報発信と開発組織について考えるきっかけにしたいと考えています。",
+      "accepted": true,
+      "speaker": {
+        "name": "Yasuharu Sakai",
+        "kana": "サカイヤスハル",
+        "twitter": "sakay_y",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/274f2771-04ed-416e-8f07-c22e543cf4eb.jpg"
+      },
+      "created": "2023-11-11T22:43:47+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T13:20:00+09:00",
+        "length_min": 40
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "c903c4be-77bb-47b9-85a1-5bfdfd61c1aa",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/c903c4be-77bb-47b9-85a1-5bfdfd61c1aa",
+      "title": "PHPコミュニティ、その魅力と熱狂をあなたにも！！！",
+      "abstract": "「PHPコミュニティ、その魅力と熱狂をあなたにも」と題した私のトークへようこそ！\r\n2022年から数々のPHPカンファレンスや勉強会に飛び込んで、今や参加したイベント数は両手ではとうに数えきれないほど、私はPHPコミュニティへの熱い愛に満ちています！！！\r\nPHPにとどまらず、技術コミュニティへの情熱は、一人のPHPerとして、また一人のエンジニアとして、成長の核となっています。\r\n\r\n「技術コミュニティとは何か？」、「なぜ私はPHPコミュニティをここまで愛するのか？」という問いに対し、私の体験と感動を通じてその答えをお届けします。\r\n\r\nただ参加するだけではもったいない！このトークを通じて、**「PHPコミュニティ人生をどうすれば200%楽しめるか」**という秘訣を余すことなく解説します！\r\n6年ぶりのPHPカンファレンス関西2024だからこそ聞いてほしいトークです！是非、この機会をお見逃しなく！！",
+      "accepted": true,
+      "speaker": {
+        "name": "ことみん",
+        "kana": "コトミン",
+        "twitter": "kotomin_m",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/38ed7a93-0d9a-4964-ac0d-4f1185321b61.jpg"
+      },
+      "created": "2023-11-12T08:51:12+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T14:35:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "a07d306b-f997-409f-8478-08fdb1c26b6f",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/a07d306b-f997-409f-8478-08fdb1c26b6f",
+      "title": "テストコードが書けるようになって「変更したけど壊してないかな」という不安を解消しませんか？〜テスト駆動開発の世界のクイックツアーも添えて〜",
+      "abstract": "どのプログラミング言語の初心者にもお伝えしたい知見「テストを書こう」のPHP版です。\r\nこれは私が考える「良いコードを書くための心得」です。\r\n\r\n初心者時代の私は目指してはいても変更しやすい実装ができませんでした。\r\n実はこれは達人ケント・ベックも同じようで、それを知って以降、少しずつ実装を改善する道を選びました。\r\nテストコードがあると、変更前後で振る舞いが変わっていないかを**何度でもすぐに**確認できます\r\n\r\nこんな方に向けて話します\r\n\r\n* PHPの文法を理解されている（特にクラスが書ける）\r\n* テストコードは書いたことがなくて全然OK\r\n* 変更するたびに実は祈っている（こっそりどうぞ）\r\n\r\nこんなことを話します\r\n\r\n* テストコードが書けるメリット\r\n* PHPUnitでテストの書き方（FizzBuzzを例に）\r\n* テスト駆動開発（小さいサイクルをデモします）\r\n* 発展：モックを使う",
+      "accepted": true,
+      "speaker": {
+        "name": "nikkie",
+        "kana": "ニッキー",
+        "twitter": "ftnext"
+      },
+      "created": "2023-11-12T11:56:57+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T13:20:00+09:00",
+        "length_min": 40
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "5c4f8114-bf4a-45b2-b0a3-ed9697ab6040",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/5c4f8114-bf4a-45b2-b0a3-ed9697ab6040",
+      "title": "PHPの「歴史的な理由」ってなんだ！？",
+      "abstract": "PHPは20年を超える歴史を持つ言語で、php.netでは度々「歴史的な理由」という単語を見かけます。\r\nこのトークでは、php.netの標準関数における説明において「歴史的な理由」がなぜ生まれたのかを追い、PHPの歴史とともにその理由について深掘ります。",
+      "accepted": true,
+      "speaker": {
+        "name": "スー",
+        "kana": "スー",
+        "twitter": "suguru_ohki",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/3a41fa43-cc0c-4e1e-a7e3-7eadafa0dcf2.jpg"
+      },
+      "created": "2023-11-12T14:37:37+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T15:10:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "de8a6738-b97c-466c-a1af-e09267250cc9",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/de8a6738-b97c-466c-a1af-e09267250cc9",
+      "title": "PHPで学ぶ、セッションの基本と応用",
+      "abstract": "ステートレスなHTTPをステートフルに変えてくれる仕組みがセッションです。ユーザのログイン、リダイレクト後のエラーメッセージの表示、CSRF対策等、現代のウェブアプリケーションで多用されているセッションですが、セッションがどのように動いているかと聞かれた時に正しく答えられますか？  \r\n\r\n本トークでは、ウェブアプリケーションにおけるセッションについて、その正体を分かりやすく解説します。セッションの正体を知ることで、初心者とベテランエンジニアの間に存在する知識と経験の差を少しでも埋めることが狙いです。\r\n\r\nこのトークでお話すること\r\n\r\n- セッションの仕組み\r\n- ウェブアプリケーションフレームワークにおいて利用されているセッションの例\r\n- セッションが本番アプリのアーキテクチャに与える影響",
+      "accepted": true,
+      "speaker": {
+        "name": "富所 亮",
+        "kana": "トミドコロ リョウ",
+        "twitter": "hanhan1978",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/721029bd-0777-47ba-90cc-0258ca56368c.jpg"
+      },
+      "created": "2023-11-12T21:37:07+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T15:30:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "0e0befdb-2028-42c8-98e2-b19e434f5a82",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/0e0befdb-2028-42c8-98e2-b19e434f5a82",
+      "title": "ほげ言語にあってPHPにない機能",
+      "abstract": "いろいろな言語の言語機能のうち、PHPにまだないものを挙げます。\r\nで、ないのはしょうがないので、どうするかと考えていきます。",
+      "accepted": true,
+      "speaker": {
+        "name": "田中ひさてる",
+        "kana": "タナカヒサテル",
+        "twitter": "tanakahisateru",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/2ebb1687-51cd-4887-b7fb-662165edd49c.jpg"
+      },
+      "created": "2023-11-12T21:50:48+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T15:50:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "0d9231ed-2f64-4908-bd16-863922f56c0f",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/0d9231ed-2f64-4908-bd16-863922f56c0f",
+      "title": "擬人化で完全に理解するクリーンアーキテクチャ",
+      "abstract": "クリーンアーキテクチャって難しいですよね？\r\nドメインモデル, ユースケース, アダプタ, インフラストラクチャ, etc, はい、私は全くわかりませんでした。\r\n\r\nただ少し視点を変えて、それぞれのレイヤーを擬人化して会話させてみると、なぜ依存関係や依存の向きについて口酸っぱく言われるのか、なんとなくわかった様な気になることができました。(例えば、ユースケースとインフラストラクチャを直接会話させると何が起きるのかなど)\r\n\r\nそこで本トークでは、\r\n\r\n- 各レイヤーの説明と擬人化\r\n- 各レイヤー間での会話方法\r\n- 依存関係管理(DI, DIP)\r\n\r\nを中心に、クリーンアーキテクチャを少しでも理解してもらえることを目標としてお話ししたいと思います。\r\n深い話はせず、あくまでも擬人化を用いてレイヤー間のやり取りを説明します。\r\nこのトークを聞けば、あなたはきっとそれぞれのレイヤーで思い出す顔が増えるでしょう。",
+      "accepted": true,
+      "speaker": {
+        "name": "しまぶ",
+        "kana": "シマブ",
+        "twitter": "shimabox",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/ae4075b8-9634-4201-9282-203435225fab.jpg"
+      },
+      "created": "2023-11-12T23:58:58+09:00",
+      "timetable": {
+        "track": "$room['B']",
+        "starts_at": "2024-02-11T15:50:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "db13195a-0368-4df7-8ca9-cdb6d17ad8f3",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/db13195a-0368-4df7-8ca9-cdb6d17ad8f3",
+      "title": "夢から現実へ: PHPエンジニアの私がスタートアップCTOとして直面した挑戦",
+      "abstract": "内製開発チームを立ち上げて半年程度のスタートアップに昨年ジョインし、2023年の7月からCTOをやっております。\r\n14名の開発チームに成長、サービスの展開を加速させていく中で、組織作りや開発基盤の整備を含め、取り組んできたことをPHPer目線でお話しします。\r\nCTOに限らず似たような立ち位置の企業にジョインしたエンジニアの参考になればと考えています。\r\n\r\n◆対象者\r\n・スタートアップエンジニア\r\n・新規の開発チーム立ち上げをしている人\r\n\r\n◆話すこと\r\n・エンジニア組織作り\r\n・採用、技術広報、技術試験の導入\r\n・経営層、他部署の知識向上\r\n・開発環境、ルール作り\r\n・うまくいった取り組み、うまくいかなかった取り組み",
+      "accepted": true,
+      "speaker": {
+        "name": "原田裕介",
+        "kana": "ハラダユウスケ",
+        "twitter": "kunikiya",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/6c02ae85-6a6b-4d2c-9b75-0f8fdbf8346f.jpg"
+      },
+      "created": "2023-11-12T23:59:16+09:00",
+      "timetable": {
+        "track": "$room['C']",
+        "starts_at": "2024-02-11T15:30:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "a71a2778-826d-480c-bb0f-153df97f3448",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/a71a2778-826d-480c-bb0f-153df97f3448",
+      "title": "実践、Interface",
+      "abstract": "このトークでは架空サイトのログインをInterfaceを利用して差し替えることでInterfaceへの理解を深めます。\r\n\r\n「Interfaceってなんだか抽象的で分かりにくい」\r\n「解説しているブログ記事や映像を見てもいまいちピンと来ていない」\r\n「ライブラリのInterfaceの使い方見てもいまいち嬉しさが分からない」\r\n\r\nそんな方は是非このプロポーザルに☆をつけてください！\r\nInterface、コワクナイ！",
+      "accepted": true,
+      "speaker": {
+        "name": "おぎ",
+        "kana": "おぎ",
+        "twitter": "ogi_chotdake_se",
+        "avatar_url": "https:\/\/fortee.jp\/files\/phpcon-kansai2024\/speaker\/2e896416-8324-4f5e-81c5-a23029966f6b.jpg"
+      },
+      "created": "2023-11-12T23:59:40+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T14:35:00+09:00",
+        "length_min": 15
+      },
+      "feedback": {
+        "open": false
+      }
+    },
+    {
+      "uuid": "c8f5b32f-5a76-4340-9035-526a8a9023b0",
+      "url": "https:\/\/fortee.jp\/phpcon-kansai2024\/proposal\/accepted?l=c8f5b32f-5a76-4340-9035-526a8a9023b0",
+      "title": "LT(Lightning Talks)",
+      "abstract": "",
+      "accepted": true,
+      "speaker": {
+        "name": "",
+        "kana": "",
+        "twitter": "",
+        "avatar_url": ""
+      },
+      "created": "2023-11-12T23:59:40+09:00",
+      "timetable": {
+        "track": "$room['A']",
+        "starts_at": "2024-02-11T14:35:00+09:00",
+        "length_min": 5
+      },
+      "feedback": {
+        "open": false
+      }
+    }
+  ]
+}
