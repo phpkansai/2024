@@ -4,6 +4,7 @@
       <q-btn
           color="amber-8"
           class="glossy"
+          :disable="doesOpenAll"
           text-color="white"
           rounded
           label="GAME START"
@@ -18,7 +19,7 @@
       <div
           v-for="proposal in cards"
           :key="proposal.cardId "
-          class="col-4"
+          class="col-sm-6 col-md-4 card-col"
       >
         <div v-show="isOpen(proposal.cardId)">
           <div v-if="proposal.isJoker">
@@ -34,7 +35,7 @@
             <q-card class="q-mx-sm q-my-sm card ">
               <q-intersection transition="flip-right">
                 <q-img
-                    :src="'../../public/results/' + proposal.uuid + '.png'"
+                    :src="'/results/' + proposal.uuid + '.png'"
                 />
               </q-intersection>
             </q-card>
@@ -65,12 +66,17 @@ export default {
       openedCardIds: [],
       selectedCardIds: [],
       openLock: true,
-      isClear: false,
+      doesOpenAll: false,
       time: null,
     }
   },
   mounted() {
     this.cards = this.getTargetsProposals()
+    this.doesOpenAll = true
+    setTimeout(() => {
+      this.doesOpenAll = false
+      this.shuffle()
+    }, 3000)
   },
   computed: {
     timerText() {
@@ -110,17 +116,21 @@ export default {
         isJoker: true,
         cardId: cardId,
       })
+      return targets
+    },
+    shuffle() {
       // シャッフル
+      const targets = this.cards
       for (let i = targets.length - 1; i > 0; i--) {
         const r = Math.floor(Math.random() * (i + 1))
         const tmp = targets[i]
         targets[i] = targets[r]
         targets[r] = tmp
       }
-      return targets
+      this.cards = targets
     },
     isOpen(cardId) {
-      if (this.isClear) {
+      if (this.doesOpenAll) {
         return true
       }
       return this.openedCardIds.includes(cardId) || this.selectedCardIds.includes(cardId)
@@ -131,7 +141,7 @@ export default {
      * @param isJoker
      */
     openCard(cardId, isJoker) {
-      if (this.isClear || this.openLock) {
+      if (this.doesOpenAll || this.openLock) {
         return
       }
 
@@ -168,7 +178,7 @@ export default {
       }
       // クリア判定
       if (this.selectedCardIds.length === this.cards.length - 1) {
-        this.isClear = true
+        this.doesOpenAll = true
         this.stopwatchStop()
       }
       setTimeout(() => {
@@ -191,7 +201,7 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  /*height: 6.5vh;*/
+.card-col {
+  max-width: 600px;
 }
 </style>
