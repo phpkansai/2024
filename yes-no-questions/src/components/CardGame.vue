@@ -35,7 +35,7 @@
             <q-card class="q-mx-sm q-my-sm card ">
               <q-intersection transition="flip-right">
                 <q-img
-                    :src="'/results/' + proposal.uuid + '.png'"
+                    :src="'/yntest/results/' + proposal.uuid + '.png'"
                 />
               </q-intersection>
             </q-card>
