@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="row justify-center q-my-lg">
+    <div v-if="suggestedTalk !== null" class="row justify-center q-my-lg">
       <div class="col-xs-11 col-md-7">
         <Transition appear name="slide-card-effect" mode="out-in">
           <q-card v-show="isShowTalkCard">
@@ -245,6 +245,9 @@ export default defineComponent({
     }
   },
   mounted : function(){
+    if (this.suggestedTalk === null) {
+      this.$router.push({name: 'ErrorNotFound'})
+    }
     // トークカードの表示
     setTimeout(() => {this.isShowTalkCard = true}, 1200)
     // その他ボタンの表示
@@ -255,7 +258,11 @@ export default defineComponent({
   computed: {
     suggestedTalk() {
       const suggestedTalkUuid = this.$route.params.uuid
-      return this.proposals.find((proposal) => proposal.uuid === suggestedTalkUuid)
+      const talk = this.proposals.find((proposal) => proposal.uuid === suggestedTalkUuid)
+      if(talk === undefined) {
+        return null
+      }
+      return talk
     },
     tweetHrefUrl() {
       const shareUrl = this.shareUrl()
@@ -269,8 +276,8 @@ export default defineComponent({
      * ダイアログを表示するかどうかを判定する
      */
     isShowDialog() {
-      const randNumber = Math.floor(Math.random() * 8)
-      if (randNumber < 7) {
+      const randNumber = Math.floor(Math.random() * 10)
+      if (randNumber < 9) {
         // 8回に1回表示
         return false
       }
