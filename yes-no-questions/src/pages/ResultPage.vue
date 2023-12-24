@@ -61,11 +61,15 @@
                 color="light-blue-13"
                 class="full-width"
                 size="20px"
-                icon="𝕏"
-                label="結果を共有する"
                 :href="tweetHrefUrl"
                 target="_blank"
             >
+              <template v-slot:label>
+                <div class="row items-center no-wrap">
+                  <p left class="x-icon">𝕏</p>
+                  <div class="text-center">結果を共有する</div>
+                </div>
+              </template>
 
               <q-list>
                 <q-item clickable v-close-popup @click="resultShareByTwitter">
@@ -414,5 +418,10 @@ export default defineComponent({
 
 .php-con-logo {
   max-width: 100px;
+}
+
+.x-icon {
+  font-size: 1.715em;
+  margin: 0px 12px 0 0;
 }
 </style>
