@@ -124,7 +124,7 @@
           <div class="col-xs-11 col-md-7 text-center">
             <q-btn
                 color="primary"
-                class="full-width q-py-md"
+                class="q-py-md"
                 flat
                 size="14px"
                 label="もう一度診断する"
