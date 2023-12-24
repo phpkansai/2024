@@ -73,7 +73,7 @@
     },
     {
         "id": 10,
-        "question": "autolodってよく聞くけど、何かはよくわからない",
+        "question": "autoloadってよく聞くけど何かはよくわからないので知っておきたい",
         "yes": null,
         "no": null,
         "resultTalkUuidWhenYes": "06582204-df2a-4af5-b301-4d394e064b0f",
