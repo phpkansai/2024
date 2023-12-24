@@ -276,8 +276,8 @@ export default defineComponent({
      * ダイアログを表示するかどうかを判定する
      */
     isShowDialog() {
-      const randNumber = Math.floor(Math.random() * 10)
-      if (randNumber < 9) {
+      const randNumber = Math.floor(Math.random() * 8)
+      if (randNumber < 7) {
         // 8回に1回表示
         return false
       }
@@ -306,6 +306,7 @@ export default defineComponent({
       localStorage.removeItem('pushBoughtDate')
       const url = "https://peatix.com/event/3752841/view?k=480d6bc1430a629adca5b030b2457224a3e4a4c6"
       window.open(url, "ticket")
+      this.dialog = false // 一応、ダイアログを閉じる
     },
     /**
      * 共有用URLを返す
