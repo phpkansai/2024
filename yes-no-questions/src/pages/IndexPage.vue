@@ -249,8 +249,8 @@ export default defineComponent({
 }
 .memory-chan02 {
   position: absolute;
-  top: 35%;
-  left: -9%;
+  top: 50%;
+  left: -7%;
   width: 80px;
   opacity: 0.4;
   z-index: -1;
