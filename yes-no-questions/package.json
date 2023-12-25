@@ -1,7 +1,7 @@
 {
   "name": "yes-no-questions",
   "version": "0.0.1",
-  "description": "2月11日にあなたが聞くべきトークは!?!? 質問に YES/NO で答えるだけで、あなたにぴったりのPHPカンファレンス関西2024おすすめトークを紹介します。",
+  "description": "2月11日にあなたが聴くべきトークは!?!? 質問に YES/NO で答えるだけで、あなたにぴったりのPHPカンファレンス関西2024おすすめトークを紹介します。",
   "productName": "おすすめトーク診断 PHPカンファレンス関西2024",
   "author": "yuji.kanoh",
   "private": true,

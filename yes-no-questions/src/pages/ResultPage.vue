@@ -124,7 +124,7 @@
           <div class="col-xs-11 col-md-7 text-center">
             <q-btn
                 color="primary"
-                class="full-width q-py-md"
+                class="q-py-md"
                 flat
                 size="14px"
                 label="もう一度診断する"
@@ -280,9 +280,9 @@ export default defineComponent({
      * ダイアログを表示するかどうかを判定する
      */
     isShowDialog() {
-      const randNumber = Math.floor(Math.random() * 8)
-      if (randNumber < 7) {
-        // 8回に1回表示
+      const randNumber = Math.floor(Math.random() * 5)
+      if (randNumber < 4) {
+        // 5回に1回表示
         return false
       }
       const pushBoughtDate = localStorage.getItem("pushBoughtDate")

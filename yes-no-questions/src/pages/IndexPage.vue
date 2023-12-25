@@ -55,7 +55,7 @@
                 <p>
                   PHPカンファレンス関西2024の当日にどのトークを聞けばいいか迷っていませんか？
                   簡単な質問に答えるだけで、あなたにぴったりのトークをめもりーちゃんが診断します。
-                  聞くべきトークを見つけて、PHPカンファレンス関西2024を楽しみましょう！
+                  聴くべきトークを見つけて、PHPカンファレンス関西2024を楽しみましょう！
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@
           <div class="text-h5 text-orange-10">トーク診断を受ける</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
-          まずは自分が診断を受けて、当日聞くべきトークを見つけましょう！
+          まずは自分が診断を受けて、当日聴くべきトークを見つけましょう！
         </q-card-section>
       </q-card>
       <q-card class="bg-orange-2 text-grey-9 col-xs-11 col-md-3 text-center q-mb-md q-mx-md">
