@@ -185,7 +185,7 @@
     },
     {
         "id": 24,
-        "question": "障害が出るのはいやだ",
+        "question": "障害はこりごりだ",
         "yes": 25,
         "no": 26,
         "resultTalkUuidWhenYes": "",
