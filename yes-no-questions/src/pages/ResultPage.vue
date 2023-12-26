@@ -273,7 +273,7 @@ export default defineComponent({
     },
     tweetHrefUrl() {
       const shareUrl = this.shareUrl()
-      const postMessage = "私におすすめのトークはこれでした!! "
+      const postMessage = "私におすすめのトークはこれでした!! 「" + this.shareTitle() + "」 "
       const hashtags = "phpkansai,トーク診断"
       return "https://twitter.com/share?url=" + shareUrl + "&text=" + postMessage + "&hashtags=" + hashtags
     }
@@ -283,9 +283,9 @@ export default defineComponent({
      * ダイアログを表示するかどうかを判定する
      */
     isShowDialog() {
-      const randNumber = Math.floor(Math.random() * 5)
-      if (randNumber < 4) {
-        // 5回に1回表示
+      const randNumber = Math.floor(Math.random() * 4)
+      if (randNumber < 3) {
+        // 4回に1回表示
         return false
       }
       const pushBoughtDate = localStorage.getItem("pushBoughtDate")
@@ -321,6 +321,12 @@ export default defineComponent({
      */
     shareUrl() {
       return "https://2024.kphpug.jp/yntest/results/" + this.suggestedTalk.uuid + ".html"
+    },
+    shareTitle() {
+      if (this.suggestedTalk.title.length <= 30) {
+        return this.suggestedTalk.title
+      }
+      return this.suggestedTalk.title.substring(0, 30) + "..."
     },
     resultShareByTwitter() {
       window.open(this.tweetHrefUrl, "_blank")
