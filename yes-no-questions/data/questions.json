@@ -209,7 +209,7 @@
     },
     {
         "id": 27,
-        "question": "勢いのあるトークを聞いて盛り上がりたい？",
+        "question": "勢いのある短いトークをたくさん聞いて盛り上がりたい？",
         "yes": null,
         "no": 13,
         "resultTalkUuidWhenYes": "c8f5b32f-5a76-4340-9035-526a8a9023b0",
