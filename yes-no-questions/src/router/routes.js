@@ -10,6 +10,11 @@ const routes = [
         component: () => import('pages/IndexPage.vue')
       },
       {
+        name: 'IndexPageWithResult/',
+        path: '/r/:uuid',
+        component: () => import('pages/IndexPage.vue')
+      },
+      {
         name: 'QuestionsPage',
         path: 'questions',
         component: () => import('pages/QuestionsPage.vue')

@@ -162,6 +162,53 @@
 
     </div>
 
+    <q-dialog v-model="showResultDialog">
+      <q-card style="width: 700px;">
+        <q-card-section class="text-center">
+          おすすめされてたトークはこちら！
+        </q-card-section>
+        <q-img :src="resultThumbnailBackground" >
+          <div class="absolute-full text-center flex flex-center result-card-background">
+            <div>
+              <div class="q-px-md q-pt-sm text-weight-bolder text-grey-9 text-overflow-lines">
+                {{ suggestedTalk.title }}
+              </div>
+              <div v-if="suggestedTalk.speaker.name" class="text-subtitle2 q-pa-sm text-grey-8">
+                {{ suggestedTalk.speaker.name }}
+                <template v-if="suggestedTalk.speaker.twitter">
+                  (@{{ suggestedTalk.speaker.twitter }})
+                </template>
+                さん
+              </div>
+            </div>
+          </div>
+        </q-img>
+        <div class="memory-chan-stage">
+          <img
+              src="~/assets/memory-chan/memory-chan04.png"
+              class="memory-chan04"
+          />
+        </div>
+        <q-card-actions align="center">
+          <q-btn
+              color="primary"
+              class="full-width"
+              flat
+              label="このトークの詳細を確認する"
+              :href="suggestedTalk.url"
+              target="fortee"
+          />
+          <q-btn
+              color="orange-8"
+              class=""
+              flat
+              label="とじる"
+              @click="showResultDialog = false"
+          />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
     <SnsButtons class="float-button"/>
 
   </q-page>
@@ -172,6 +219,8 @@ import { defineComponent } from 'vue'
 import BackWebSiteButton from "../components/BackWebSiteButton.vue"
 import SnsButtons from "../components/SnsButtons.vue"
 import {Loading, QSpinnerPuff} from 'quasar'
+import ResultThumbnail from "assets/resultThumbnail.png";
+import ProposalsData from "app/data/proposals.json";
 
 export default defineComponent({
   name: 'IndexPage',
@@ -179,6 +228,10 @@ export default defineComponent({
     return {
       loading: true,
       loadingQuestion: false,
+      showResultDialog: false,
+      resultUuid: '',
+      proposals: ProposalsData.proposals,
+      resultThumbnailBackground: ResultThumbnail,
     }
   },
   mounted : function(){
@@ -188,6 +241,10 @@ export default defineComponent({
       messageColor: 'brown-8',
       spinnerColor: 'white',
     })
+    this.resultUuid = this.$route.params.uuid
+    setTimeout(() => {
+      this.showResultDialog = this.resultUuid != '' && this.suggestedTalk != null
+    }, 1000)
   },
   watch: {
     loading: function (val) {
@@ -199,6 +256,15 @@ export default defineComponent({
   components: {
     BackWebSiteButton,
     SnsButtons,
+  },
+  computed: {
+    suggestedTalk() {
+      const talk = this.proposals.find((proposal) => proposal.uuid === this.resultUuid)
+      if(talk === undefined) {
+        return null
+      }
+      return talk
+    },
   },
   methods: {
     hideLoad() {
@@ -324,6 +390,26 @@ export default defineComponent({
   width: 200px;
   animation:
       zoom-in-anime1 1.8s linear forwards alternate;
+}
+
+.result-card-background {
+  background:rgba(255,255,255,0.3);
+}
+
+.text-overflow-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.memory-chan04 {
+  position: absolute;
+  bottom: 0px;
+  right: 4px;
+  width: 22.5%;
+  opacity: 1.0;
+  z-index: -1;
 }
 
 </style>
