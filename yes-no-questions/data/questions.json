@@ -97,7 +97,7 @@
     },
     {
         "id": 13,
-        "question": "もっと綺麗にコードを書きたい",
+        "question": "コードを綺麗に書く技術に興味がある",
         "yes": 14,
         "no": 18,
         "resultTalkUuidWhenYes": "",
@@ -153,7 +153,7 @@
     },
     {
         "id": 20,
-        "question": "コミュニティに参加してみたいなって思う",
+        "question": "コミュニティに参加に興味がある",
         "yes": null,
         "no": 21,
         "resultTalkUuidWhenYes": "c903c4be-77bb-47b9-85a1-5bfdfd61c1aa",
