@@ -244,7 +244,7 @@ export default defineComponent({
     this.resultUuid = this.$route.params.uuid
     setTimeout(() => {
       this.showResultDialog = this.resultUuid != '' && this.suggestedTalk != null
-    }, 1500)
+    }, 1000)
   },
   watch: {
     loading: function (val) {
