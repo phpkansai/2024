@@ -113,7 +113,7 @@
     },
     {
         "id": 15,
-        "question": "クリーンアーキテクチャは完全に理解した",
+        "question": "クリーンアーキテクチャは理解したつもりだ",
         "yes": null,
         "no": null,
         "resultTalkUuidWhenYes": "b3f6ed97-8551-40da-90b1-3a14697df303",
