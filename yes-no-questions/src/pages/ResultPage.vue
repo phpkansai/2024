@@ -215,6 +215,9 @@
           <q-btn label="買った" size="md" color="amber-2 text-black" class="q-mx-md" @click="pushBoughtButton" />
           <q-btn label="まだです" size="md" color="orange-7" class="q-mx-md" @click="pushNotBoughtYetButton" />
         </q-card-actions>
+        <q-card-section class="text-center q-pt-sm text-caption">
+          チケットは1/17までにお買い求めください。
+        </q-card-section>
       </q-card>
     </q-dialog>
 
@@ -244,7 +247,7 @@ export default defineComponent({
       isShowButtons: false,
       resultThumbnailBackground: ResultThumbnail,
       buttonLabelMessage: "",
-      dialog: false,
+      dialog: true,
       hideLabel: true,
     }
   },
