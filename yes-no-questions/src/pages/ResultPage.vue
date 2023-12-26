@@ -155,7 +155,7 @@
             <div class="col-6 text-center">
               <q-img
                   class="col-5 php-con-logo"
-                  src="../assets/php_con_logo2024_no_text.png"
+                  src="../assets/php_con_logo2024.png"
                   fit="contain"
               />
             </div>
@@ -215,6 +215,9 @@
           <q-btn label="買った" size="md" color="amber-2 text-black" class="q-mx-md" @click="pushBoughtButton" />
           <q-btn label="まだです" size="md" color="orange-7" class="q-mx-md" @click="pushNotBoughtYetButton" />
         </q-card-actions>
+        <q-card-section class="text-center q-pt-sm text-caption text-red-10">
+          チケットは1/17までにお買い求めください。
+        </q-card-section>
       </q-card>
     </q-dialog>
 
