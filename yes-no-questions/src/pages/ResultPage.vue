@@ -358,6 +358,7 @@ export default defineComponent({
       }
       const message = "PHPカンファレンス関西2024\n【おすすめトーク診断】\n\n私におすすめのトークはこれでした!! \n\n"
           + "**" + this.suggestedTalk.title + "**\n" + speakerName
+          + "\n#phpkansai #トーク診断" + "\n"
       navigator.clipboard.writeText(message + this.shareUrl())
       Notify.create('コピーしました!!')
     },
