@@ -142,7 +142,7 @@
     </Transition>
 
     <q-dialog v-model="dialog">
-      <q-card class="bg-orange-2 dialog-card text-grey-9">
+      <q-card class="bg-yellow-2 dialog-card text-grey-9">
         <q-card-section class="">
           <div class="text-h6 text-center text-orange-10 text-weight-bold">
             PHPカンファレンス関西2024は<br />
@@ -215,7 +215,7 @@
           <q-btn label="買った" size="md" color="amber-2 text-black" class="q-mx-md" @click="pushBoughtButton" />
           <q-btn label="まだです" size="md" color="orange-7" class="q-mx-md" @click="pushNotBoughtYetButton" />
         </q-card-actions>
-        <q-card-section class="text-center q-pt-sm text-caption text-red-10">
+        <q-card-section class="text-center q-pt-sm text-caption text-red-7 text-weight-bold">
           チケットは1/17までにお買い求めください。
         </q-card-section>
       </q-card>
@@ -283,9 +283,9 @@ export default defineComponent({
      * ダイアログを表示するかどうかを判定する
      */
     isShowDialog() {
-      const randNumber = Math.floor(Math.random() * 4)
-      if (randNumber < 3) {
-        // 4回に1回表示
+      const rate = 2 // n回に1回表示
+      const randNumber = Math.floor(Math.random() * rate)
+      if (randNumber < (rate - 1)) {
         return false
       }
       const pushBoughtDate = localStorage.getItem("pushBoughtDate")
