@@ -1,7 +1,7 @@
 {
   "background": {
     "color": {
-      "value": "#faefecff"
+      "value": "#ffdfdcff"
     }
   },
   "fpsLimit": 120,
@@ -68,10 +68,15 @@
       "value": 1.0
     },
     "shape": {
-      "type": "circle"
+      "type": "image",
+      "image": {
+        "src": "https://2024.kphpug.jp/img/ume.png",
+        "width": 10,
+        "height": 10
+      }
     },
     "size": {
-      "value": { "min": 1, "max": 5 }
+      "value": { "min": 1, "max": 8 }
     }
   },
   "detectRetina": true
