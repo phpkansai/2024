@@ -229,7 +229,7 @@
 <script>
 import { defineComponent } from 'vue'
 import ProposalsData from "../../data/proposals.json"
-import ResultThumbnail from "../assets/resultThumbnailNewYear.png"
+import ResultThumbnail from "../assets/resultThumbnail.png"
 import PhpConKansaiCard from "../components/PhpConKansaiCard.vue"
 import SnsButtons from "../components/SnsButtons.vue"
 import {Notify} from 'quasar'
