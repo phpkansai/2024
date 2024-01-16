@@ -601,10 +601,19 @@ a:visited {
 		margin: 0 auto;
 		text-align: center;
 	}
-
+#hash_area{
+	text-align: center;
+	width:40%;
+	margin: 0 auto;
+	padding:  20px 0;
+	border:#56413D dotted 3px ;
+}
 
 
    @media screen and (max-width: 980px){
+	#hash_area{
+		width:94%;
+	}
     .rec_menu_back{
       width:100%;
     }
