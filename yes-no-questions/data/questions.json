@@ -17,9 +17,9 @@
     },
     {
         "id": 3,
-        "question": "コードは綺麗に書きたい！！",
-        "yes": 4,
-        "no": 5,
+        "question": "コードを綺麗に書きたい！！",
+        "yes": 5,
+        "no": 4,
         "resultTalkUuidWhenYes": "",
         "resultTalkUuidWhenNo": ""
     },
