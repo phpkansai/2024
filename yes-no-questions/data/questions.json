@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "question": "自分のコードは綺麗だと思う？?",
+        "question": "コードは綺麗に書きたい！！",
         "yes": 4,
         "no": 5,
         "resultTalkUuidWhenYes": "",
