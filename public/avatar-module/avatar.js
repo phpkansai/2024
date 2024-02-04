@@ -184,7 +184,7 @@ const avatar_list_staff = [
     ],
     [
         {
-            "id": "avatar-staff-_yuki0302_",
+            "id": "avatar-staff-Ryuki_4648",
             "name": "yuki"
         },
         {
