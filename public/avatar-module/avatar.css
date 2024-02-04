@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.avatar-module-row {
+    max-width: 1024px;
+    color: #56413d;
+    margin-top: 30px;
+    gap: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-image: url(../avatar-module/avatar-figure-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 1.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    box-sizing: border-box;
+}
+
+.avatar-module-row figure {
+    margin: 0;
+    overflow: overlay;
+}
+
+.avatar-module-row figure figcaption {
+    margin-top: 5%;
+    font-size: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    line-height: 1em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.avatar-module-image {
+    padding: 4px 2px;
+    border-radius: 10%;
+    background-size: contain;
+    background-image: url(../avatar-module/avatar-bg.webp);
+}
+
+.avatar-module-image img {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1536px){
+    .avatar-module-row {
+        padding-top: 1.1%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+    }
+
+    .avatar-module-row figure figcaption {
+        margin-top:10%;
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .avatar-module-row figure figcaption {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .avatar-module-row figure figcaption {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .avatar-module-row {
+        gap: 1.8%;
+        padding-top: 1.8%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .avatar-module-row figure figcaption {
+        font-size: 0.75em;
+    }
+}

@@ -113,6 +113,8 @@
     <a href="#"><span>上部に<br>もどる</span></a>
     </p>
 
+    <link rel="stylesheet" type="text/css" href="./avatar-module/avatar.css" media="all">
+    <script type="text/javascript" src="./avatar-module/avatar.js"></script>
 
 </head>
 
@@ -666,7 +668,8 @@
           <!-- スポンサーここまで -->
 
 
-          <!-- スピーカーここから
+          <!-- スピーカーここから -->
+
           <div class="bosyu_back">
             <p style="text-align: right;">
               <img src="./img/drop2.png" alt="PHPカンファレンス関西2024" />
@@ -675,8 +678,13 @@
               <p class="cnr_ttl">
                 <img src="./img/cnr_speaker.png" alt="スピーカー" />
               </p>
+              <div id="speaker"></div>
+              <script>
+                  avatarRow("speaker", avatar_list_speaker);
+              </script>
             </div>
           </div>
+
           <!-- スピーカーここまで -->
 
 
@@ -686,12 +694,12 @@
           <div class="news_back">
 
             <p style="text-align: right;">
-              <img src="./img/drop2.png" alt="PHPカンファレンス関西2024" />
+              <img src="./img/drop6.png" alt="PHPカンファレンス関西2024" />
             </p>
 
 <!--
             <p style="text-align: left;">
-              <img src="./img/drop6.png" alt="PHPカンファレンス関西2024" />
+              <img src="./img/drop2.png" alt="PHPカンファレンス関西2024" />
             </p>
 -->
             <div class="about_conf">
@@ -713,38 +721,17 @@
                 <img src="./img/cnr_staff.png" alt="スタッフ" />
               </p>
 <!--
-            <p class="cnr_ttl">
-              <img src="./img/ribbon.png" alt="" />
-            </p>
+              <p class="cnr_ttl">
+                <img src="./img/ribbon.png" alt="" />
+              </p>
 -->
-            <p class="staff_list">
-              <img src="./img/staff1.png" alt="PHPカンファレンス関西2024" />
-            </p>
-
-            <p class="staff_list fadeUpTrigger" style="margin-top: 30px;">
-              <img src="./img/staff2.png" alt="PHPカンファレンス関西2024" />
-            </p>
-
-            <p class="staff_list fadeUpTrigger" style="margin-top: 30px;">
-              <img src="./img/staff3.png" alt="PHPカンファレンス関西2024" />
-            </p>
-
-            <p class="staff_list fadeUpTrigger" style="margin-top: 30px;">
-              <img src="./img/staff4.png" alt="PHPカンファレンス関西2024" />
-            </p>
-
-            <p class="staff_list fadeUpTrigger" style="margin-top: 30px;">
-              <img src="./img/staff5.png" alt="PHPカンファレンス関西2024" />
-            </p>
-
-            <p class="staff_list fadeUpTrigger" style="margin-top: 30px;">
-              <img src="./img/staff6.png" alt="PHPカンファレンス関西2024" />
-            </p>
-
-            <p class="staff_list fadeUpTrigger" style="margin-top: 30px;">
-              <img src="./img/staff7.png" alt="PHPカンファレンス関西2024" />
-            </p>
-          </div>
+              <div id="staff-superglobals"></div>
+              <div id="staff"></div>
+              <script>
+                  avatarRow("staff-superglobals", avatar_list_staff_superglobals);
+                  avatarRow("staff", avatar_list_staff);
+              </script>
+            </div>
           </div>
           <!-- スタッフここまで -->
 
