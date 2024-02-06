@@ -130,7 +130,7 @@ const avatar_list_staff_superglobals = [
 const avatar_list_staff = [
     [
         {
-            "id": "avatar-null",
+            "id": "avatar-staff-azu57812484",
             "name": "ito.azusa"
         },
         {
