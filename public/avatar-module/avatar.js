@@ -139,7 +139,7 @@ const avatar_list_staff = [
         },
         {
             "id": "avatar-staff-kaho_eng",
-            "name": "kaho2148"
+            "name": "かほ"
         },
         {
             "id": "avatar-staff-dero1to",
