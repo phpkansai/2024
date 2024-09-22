@@ -186,6 +186,27 @@ margin: 0 0 4px 0 !important;
     width:115px;
 }
 
+.fact-background {
+    background-image: url('../img/fact-background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.fact-cell {
+    font: #555;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.fact-cell-detail {
+    font-size: 0.8em;
+}
+
+.fact-cell-main {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 /* slide
 -----------------------------------------------------------*/
 .slick-slider {
